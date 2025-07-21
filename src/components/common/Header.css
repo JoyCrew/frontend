@@ -1,0 +1,89 @@
+.Header {
+  position: absolute;
+  width: 1440px;
+  height: 79px;
+  left: 0px;
+  top: 0px;
+
+  display: flex;
+}
+
+.Header .logo {
+  position: absolute;
+  width: 144.28px;
+  height: 31.87px;
+  left: 81px;
+  top: 23.57px;
+}
+
+.Header .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 62px;
+
+  position: absolute;
+  width: 514px;
+  height: 21px;
+  left: 463px;
+  top: 29px;
+}
+
+.Header .navbar p {
+  font-weight: 500;
+  font-size: 18px;
+
+  color: #21212f;
+
+  /* 내부 오토레이아웃 */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.Header .profile {
+  position: absolute;
+  width: 180px;
+  height: 62px;
+  left: 1151px;
+  top: 11px;
+}
+
+.Header .profile .person {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  left: 13px;
+  top: 8px;
+}
+
+.Header .profile .ment .name {
+  position: absolute;
+  height: 22px;
+  left: 73px;
+  top: 9px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 110%;
+
+  color: #21212f;
+
+  /* 내부 오토레이아웃 */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.Header .profile .ment .point {
+  position: absolute;
+  height: 22px;
+  left: 73px;
+  top: 32px;
+
+  font-size: 16px;
+  line-height: 140%;
+
+  color: #626273;
+}
