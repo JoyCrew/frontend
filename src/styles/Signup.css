@@ -1,0 +1,34 @@
+.SignUp .InputField_email {
+  left: 49px;
+  top: 174px;
+}
+
+.SignUp .InputField_name {
+  left: 49px;
+  top: 301px;
+  width: 240px;
+}
+
+.SignUp .InputField_name .input-field-input {
+  width: 240px;
+}
+
+.SignUp .InputField_department {
+  left: 310.57px;
+  top: 301px;
+  width: 240px;
+}
+
+.SignUp .InputField_department .input-field-input {
+  width: 240px;
+}
+
+.SignUp .InputField_password {
+  left: 49px;
+  top: 422px;
+}
+
+.SignUp .Button_signup {
+  left: 49px;
+  top: 582px;
+}

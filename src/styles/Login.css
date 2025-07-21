@@ -1,0 +1,39 @@
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.PopupLogo {
+  position: absolute;
+  width: 173.3px;
+  height: 38.21px;
+  left: 49px;
+  top: 70px;
+}
+
+.Login .TextLink {
+  right: 49px;
+  top: 70px;
+}
+
+.Login .InputField_email {
+  left: 49px;
+  top: 191px;
+}
+
+.Login .InputField_password {
+  left: 49px;
+  top: 315px;
+}
+
+.Login .Button_login {
+  left: 49px;
+  top: 507px;
+}
+
+.Login .Button_google {
+  left: 49px;
+  top: 581px;
+}
