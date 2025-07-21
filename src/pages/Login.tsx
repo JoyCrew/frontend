@@ -33,7 +33,7 @@ const Login: React.FC = () => {
           to="/signup"
         />
         <InputField
-          label="이메일 주소"
+          label="이메일"
           type="email"
           name="email"
           value={email}
