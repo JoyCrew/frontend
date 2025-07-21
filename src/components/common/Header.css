@@ -6,6 +6,7 @@
   top: 0px;
 
   display: flex;
+  background-color: #ffffff;
 }
 
 .Header .logo {
@@ -48,23 +49,23 @@
   bottom: -26px;
   height: 4px;
   background-color: #6b63e1;
-  width: 120px;
+  width: 124px;
 }
 
 .nav-item.active_0::after {
-  left: -50px;
+  left: -52px;
 }
 
 .nav-item.active_1::after {
-  left: 76px;
+  left: 72px;
 }
 
 .nav-item.active_2::after {
-  left: 242px;
+  left: 240px;
 }
 
 .nav-item.active_3::after {
-  left: 395px;
+  left: 392px;
 }
 
 .Header .profile {

@@ -1,0 +1,66 @@
+.PointStatus {
+  position: absolute;
+  width: 155px;
+  height: 295px;
+  top: 121px;
+  left: 84px;
+}
+.PointStatus p {
+  position: absolute;
+  width: 92px;
+  height: 24px;
+  left: 8px;
+  top: 0px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* 상자 높이와 동일 */
+
+  /* gray scale/#21212F */
+  color: #21212f;
+}
+
+.PointStatus .PointMini {
+  position: absolute;
+  width: 155px;
+  height: 120px;
+  left: 0px;
+  background: #f4f6ff;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+
+.PointStatus .PointMini h3 {
+  position: absolute;
+  top: 20px;
+  left: 51px;
+  width: 52px;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 53px;
+  /* 상자 높이와 동일 */
+  /* gray scale/#21212F */
+  color: #21212f;
+  text-align: center;
+}
+
+.PointStatus .PointMini p {
+  position: absolute;
+  left: 44px;
+  top: 77px;
+  width: 66px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* 상자 높이와 동일 */
+  text-align: center;
+}
+
+.PointStatus .PointMini_receive {
+  top: 40px;
+}
+
+.PointStatus .PointMini_send {
+  top: 175px;
+}
