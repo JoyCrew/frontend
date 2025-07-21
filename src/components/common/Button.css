@@ -1,0 +1,20 @@
+.Button {
+  position: absolute;
+  width: 502.04px;
+  height: 54px;
+
+  /* Main01 */
+  background: #6b63e1;
+  box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  /* 상자 높이와 동일 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}

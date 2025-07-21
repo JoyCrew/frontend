@@ -1,0 +1,60 @@
+.InputField {
+  position: absolute;
+  width: 502.04px;
+  height: 92px;
+}
+
+.input-field-label {
+  position: absolute;
+  width: 100px;
+  left: 0%;
+  right: 85.26%;
+  top: 3.26%;
+  bottom: 76.09%;
+  font-size: 16px;
+  line-height: 19px;
+  /* 상자 높이와 동일 */
+
+  color: #000000;
+}
+
+.input-field-input {
+  box-sizing: border-box;
+  width: 502.04px;
+  height: 57px;
+  padding-left: 10px;
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 43.48%;
+  bottom: -5.43%;
+
+  background: #ffffff;
+  /* Main01 */
+  border: 1px solid #6b63e1;
+  border-radius: 9px;
+}
+
+.input-field-icon {
+  position: absolute;
+  right: 25px;
+  top: 70px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+}
+
+.input-field-right-text {
+  position: absolute;
+  width: 85px;
+  height: 17px;
+  left: 417.02px;
+  top: 114px;
+
+  font-weight: 500;
+  color: #6b63e1;
+  cursor: pointer;
+  text-align: right;
+  font-size: 14px;
+}

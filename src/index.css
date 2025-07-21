@@ -1,5 +1,6 @@
 @import url("../reset.css");
 
+html,
 body {
   margin: 0px;
   display: flex;
@@ -18,4 +19,8 @@ body {
     format("woff");
   font-weight: 400;
   font-style: normal;
+}
+
+body * {
+  font-family: "Pretendard";
 }

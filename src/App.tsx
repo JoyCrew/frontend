@@ -1,10 +1,15 @@
 import "./App.css";
-import Header from "./components/common/Header";
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
     <>
-      <Header />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
     </>
   );
 }
