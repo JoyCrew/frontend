@@ -1,9 +1,9 @@
 .Header {
   position: absolute;
-  width: 1440px;
-  height: 79px;
-  left: 0px;
-  top: 0px;
+  width: 90rem;
+  height: 4.9375rem;
+  left: 0rem;
+  top: 0rem;
 
   display: flex;
   background-color: #ffffff;
@@ -11,29 +11,29 @@
 
 .Header .logo {
   position: absolute;
-  width: 144.28px;
-  height: 31.87px;
-  left: 81px;
-  top: 23.57px;
+  width: 9.0175rem;
+  height: 1.9919rem;
+  left: 5.0625rem;
+  top: 1.4731rem;
 }
 
 .Header .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
-  gap: 62px;
+  padding: 0rem;
+  gap: 3.875rem;
 
   position: absolute;
-  width: 514px;
-  height: 21px;
-  left: 463px;
-  top: 29px;
+  width: 32.125rem;
+  height: 1.3125rem;
+  left: 28.9375rem;
+  top: 1.8125rem;
 }
 
 .Header .navbar .nav-item {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
 
   color: #21212f;
 
@@ -46,55 +46,55 @@
 .nav-item.active::after {
   content: "";
   position: absolute;
-  bottom: -26px;
-  height: 4px;
+  bottom: -1.625rem;
+  height: 0.25rem;
   background-color: #6b63e1;
 }
 
 .nav-item.active_0::after {
-  left: -29px;
-  width: 78px;
+  left: -1.8125rem;
+  width: 4.875rem;
 }
 
 .nav-item.active_1::after {
-  left: 62px;
-  width: 144px;
+  left: 3.875rem;
+  width: 9rem;
 }
 
 .nav-item.active_2::after {
-  left: 235px;
-  width: 134px;
+  left: 14.6875rem;
+  width: 8.375rem;
 }
 
 .nav-item.active_3::after {
-  left: 390px;
-  width: 124px;
+  left: 24.375rem;
+  width: 7.75rem;
 }
 
 .Header .profile {
   position: absolute;
-  width: 180px;
-  height: 62px;
-  left: 1151px;
-  top: 11px;
+  width: 11.25rem;
+  height: 3.875rem;
+  left: 71.9375rem;
+  top: 0.6875rem;
 }
 
 .Header .profile .person {
   position: absolute;
-  width: 46px;
-  height: 46px;
-  left: 13px;
-  top: 8px;
+  width: 2.875rem;
+  height: 2.875rem;
+  left: 0.8125rem;
+  top: 0.5rem;
 }
 
 .Header .profile .ment .name {
   position: absolute;
-  height: 22px;
-  left: 73px;
-  top: 9px;
+  height: 1.375rem;
+  left: 4.5625rem;
+  top: 0.5625rem;
 
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 110%;
 
   color: #21212f;
@@ -107,11 +107,11 @@
 
 .Header .profile .ment .point {
   position: absolute;
-  height: 22px;
-  left: 73px;
-  top: 32px;
+  height: 1.375rem;
+  left: 4.5625rem;
+  top: 2rem;
 
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 140%;
 
   color: #626273;

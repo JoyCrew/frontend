@@ -1,39 +1,53 @@
 .SignUp {
   position: relative;
+  width: 100%;
   height: 100%;
+
+  /* 배경 이미지 적용 (img 태그 대신) */
+  background-image: url("../assets/background.svg"); /* background.svg 파일 경로 확인 */
+  background-size: cover; /* 이미지를 컨테이너에 꽉 채움 */
+  background-position: center; /* 이미지를 중앙 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  /* Popup을 중앙에 배치하기 위한 Flexbox */
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+
+  box-sizing: border-box;
+  overflow: hidden; /* 혹시 모를 내부 요소 넘침 방지 */
 }
 
 .SignUp .InputField_email {
-  left: 49px;
-  top: 174px;
+  left: 3.0625rem;
+  top: 10.875rem;
 }
 
 .SignUp .InputField_name {
-  left: 49px;
-  top: 301px;
-  width: 240px;
+  left: 3.0625rem;
+  top: 18.8125rem;
+  width: 15rem;
 }
 
 .SignUp .InputField_name .input-field-input {
-  width: 240px;
+  width: 15rem;
 }
 
 .SignUp .InputField_department {
-  left: 310.57px;
-  top: 301px;
-  width: 240px;
+  left: 19.4106rem;
+  top: 18.8125rem;
+  width: 15rem;
 }
 
 .SignUp .InputField_department .input-field-input {
-  width: 240px;
+  width: 15rem;
 }
 
 .SignUp .InputField_password {
-  left: 49px;
-  top: 422px;
+  left: 3.0625rem;
+  top: 26.375rem;
 }
 
 .SignUp .Button_signup {
-  left: 49px;
-  top: 582px;
+  left: 3.0625rem;
+  top: 36.375rem;
 }

@@ -1,18 +1,18 @@
 .InputField {
   position: absolute;
-  width: 502.04px;
-  height: 92px;
+  width: 31.3775rem;
+  height: 5.75rem;
 }
 
 .input-field-label {
   position: absolute;
-  width: 100px;
+  width: 6.25rem;
   left: 0%;
   right: 85.26%;
   top: 3.26%;
   bottom: 76.09%;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   /* 상자 높이와 동일 */
 
   color: #000000;
@@ -20,9 +20,9 @@
 
 .input-field-input {
   box-sizing: border-box;
-  width: 502.04px;
-  height: 57px;
-  padding-left: 15px;
+  width: 31.3775rem;
+  height: 3.5625rem;
+  padding-left: 0.9375rem;
 
   position: absolute;
   left: 0%;
@@ -32,15 +32,15 @@
 
   background: #ffffff;
   /* Main01 */
-  border: 1px solid #6b63e1;
-  border-radius: 9px;
+  border: 0.0625rem solid #6b63e1;
+  border-radius: 0.5625rem;
   outline: none;
 }
 
 .input-field-icon {
   position: absolute;
-  right: 25px;
-  top: 70px;
+  right: 1.5625rem;
+  top: 4.375rem;
   transform: translateY(-50%);
   cursor: pointer;
   color: #777;
@@ -48,14 +48,14 @@
 
 .input-field-right-text {
   position: absolute;
-  width: 85px;
-  height: 17px;
-  left: 417.02px;
-  top: 114px;
+  width: 5.3125rem;
+  height: 1.0625rem;
+  left: 26.0637rem;
+  top: 7.125rem;
 
   font-weight: 500;
   color: #6b63e1;
   cursor: pointer;
   text-align: right;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
