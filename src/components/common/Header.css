@@ -49,23 +49,26 @@
   bottom: -26px;
   height: 4px;
   background-color: #6b63e1;
-  width: 124px;
 }
 
 .nav-item.active_0::after {
-  left: -52px;
+  left: -29px;
+  width: 78px;
 }
 
 .nav-item.active_1::after {
-  left: 72px;
+  left: 62px;
+  width: 144px;
 }
 
 .nav-item.active_2::after {
-  left: 240px;
+  left: 235px;
+  width: 134px;
 }
 
 .nav-item.active_3::after {
-  left: 392px;
+  left: 390px;
+  width: 124px;
 }
 
 .Header .profile {

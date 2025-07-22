@@ -1,3 +1,8 @@
+.SignUp {
+  position: relative;
+  height: 100%;
+}
+
 .SignUp .InputField_email {
   left: 49px;
   top: 174px;

@@ -3,7 +3,10 @@
   width: 600px;
   height: 741px;
   left: 420px;
-  top: 141px;
+  /* top: 141px; */
+  /* 기존 */
+
+  top: 90px;
 
   padding-top: 70px;
   padding-left: 49px;
