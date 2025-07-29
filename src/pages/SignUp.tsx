@@ -1,6 +1,5 @@
 import "../styles/Signup.css";
 import { useState } from "react";
-import background from "../assets/background.svg";
 import logo from "../assets/logo.svg";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
@@ -25,7 +24,6 @@ const SignUp: React.FC = () => {
 
   return (
     <div className="SignUp">
-      <img src={background} alt="" className="background" />
       <Popup>
         <img src={logo} alt="logo" className="PopupLogo" />
         <InputField

@@ -1,0 +1,22 @@
+.PointStatus {
+  position: absolute;
+  width: 155px;
+  height: 295px;
+  top: 121px;
+  left: 84px;
+}
+.PointStatus p {
+  position: absolute;
+  width: 92px;
+  height: 24px;
+  left: 8px;
+  top: 0px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* 상자 높이와 동일 */
+
+  /* gray scale/#21212F */
+  color: #21212f;
+}

@@ -5,12 +5,14 @@ body {
   margin: 0px;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #root {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8fbff;
 }
 
 @font-face {
@@ -23,4 +25,16 @@ body {
 
 body * {
   font-family: "Pretendard";
+}
+
+.main {
+  position: absolute;
+  width: 90rem;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+html {
+  font-size: clamp(4.5px, 1.25vw, 18px);
 }

@@ -1,6 +1,5 @@
 import "../styles/Login.css";
 import { useState } from "react";
-import background from "../assets/background.svg";
 import logo from "../assets/logo.svg";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
@@ -24,7 +23,6 @@ const Login: React.FC = () => {
 
   return (
     <div className="Login">
-      <img src={background} alt="" className="background" />
       <Popup>
         <img src={logo} alt="logo" className="PopupLogo" />
         <TextLink

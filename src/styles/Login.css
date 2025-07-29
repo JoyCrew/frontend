@@ -1,39 +1,51 @@
-.background {
+.Login {
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: -1;
+
+  /* 배경 이미지 적용 (img 태그 대신) */
+  background-image: url("../assets/background.svg"); /* background.svg 파일 경로 확인 */
+  background-size: cover; /* 이미지를 컨테이너에 꽉 채움 */
+  background-position: center; /* 이미지를 중앙 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  /* Popup을 중앙에 배치하기 위한 Flexbox */
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+
+  box-sizing: border-box;
+  overflow: hidden; /* 혹시 모를 내부 요소 넘침 방지 */
 }
 
 .PopupLogo {
   position: absolute;
-  width: 173.3px;
-  height: 38.21px;
-  left: 49px;
-  top: 70px;
+  width: 10.8313rem;
+  height: 2.3881rem;
+  left: 3.0625rem;
+  top: 4.375rem;
 }
 
 .Login .TextLink {
-  right: 49px;
-  top: 70px;
+  right: 3.0625rem;
+  top: 4.375rem;
 }
 
 .Login .InputField_email {
-  left: 49px;
-  top: 191px;
+  left: 3.0625rem;
+  top: 11.9375rem;
 }
 
 .Login .InputField_password {
-  left: 49px;
-  top: 315px;
+  left: 3.0625rem;
+  top: 19.6875rem;
 }
 
 .Login .Button_login {
-  left: 49px;
-  top: 507px;
+  left: 3.0625rem;
+  top: 31.6875rem;
 }
 
 .Login .Button_google {
-  left: 49px;
-  top: 581px;
+  left: 3.0625rem;
+  top: 36.3125rem;
 }
