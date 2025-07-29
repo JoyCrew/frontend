@@ -1,6 +1,7 @@
 import "../common/Header.css";
 import logo from "../../assets/logo.svg";
 import person from "../../assets/person.svg";
+import alarm from "../../assets/alarm.svg";
 import { Link, useLocation } from "react-router-dom";
 
 interface HeaderProps {
@@ -41,6 +42,7 @@ const Header: React.FC<HeaderProps> = ({ name, point }) => {
           <p className="point">{point} points</p>
         </div>
       </div>
+      <img className="alarm" src={alarm} alt="alarm" />
     </header>
   );
 };
