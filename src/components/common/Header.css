@@ -2,7 +2,6 @@
   position: absolute;
   width: 90rem;
   height: 4.9375rem;
-  left: 0rem;
   top: 0rem;
 
   display: flex;
@@ -75,7 +74,7 @@
   position: absolute;
   width: 11.25rem;
   height: 3.875rem;
-  left: 71.9375rem;
+  right: 6.8125rem;
   top: 0.6875rem;
 }
 

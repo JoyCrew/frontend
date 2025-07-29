@@ -4,9 +4,11 @@ import PointStatus from "../components/mypage/PointStatus";
 
 const MyPage = () => {
   return (
-    <div className="MyPage">
-      <Header name="홍길동" point={30} />
-      <PointStatus />
+    <div className="main">
+      <div className="MyPage">
+        <Header name="홍길동" point={30} />
+        <PointStatus />
+      </div>
     </div>
   );
 };

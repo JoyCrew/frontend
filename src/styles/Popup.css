@@ -1,12 +1,9 @@
 .Popup {
-  position: absolute;
+  position: relative;
   width: 37.5rem;
   height: 46.3125rem;
-  left: 26.25rem;
-  /* top: 8.8125rem; */
-  /* 기존 */
 
-  top: 5.625rem;
+  /* top: 5.625rem; */
 
   padding-top: 4.375rem;
   padding-left: 3.0625rem;
