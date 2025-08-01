@@ -4,6 +4,7 @@ import { useRecoilValue } from "recoil";
 import { searchResultState } from "../../states/searchResultState";
 import WorkerListItem from "./WorkerListItem";
 import type { Employee } from "../../states/searchResultState";
+import Button from "../common/Button";
 
 const WorkerList: React.FC = () => {
   const searchResult = useRecoilValue(searchResultState);
@@ -21,9 +22,16 @@ const WorkerList: React.FC = () => {
             <WorkerListItem key={index} employee={employee} />
           ))
         ) : (
-          <p>없음</p>
+          <p></p>
         )}
       </div>
+      <Button
+        text="다음"
+        onClick={() => {
+          console.log("선택해야함");
+        }}
+        className="smallGrey"
+      />
     </div>
   );
 };
