@@ -1,13 +1,17 @@
 import "../styles/MyPage.css";
 import Header from "../components/common/Header";
+import useHeaderData from "../hooks/useHeaderData";
 import PointStatus from "../components/mypage/PointStatus";
+import Profile from "../components/mypage/Profile";
 
 const MyPage = () => {
+  const { name, point } = useHeaderData();
   return (
     <div className="main">
       <div className="MyPage">
-        <Header name="홍길동" point={30} />
+        <Header name={name} point={point} />
         <PointStatus />
+        <Profile />
       </div>
     </div>
   );
