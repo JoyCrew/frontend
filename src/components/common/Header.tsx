@@ -14,9 +14,9 @@ const Header: React.FC<HeaderProps> = ({ name, point }) => {
 
   const navItems = [
     { name: "홈", path: "/" },
-    { name: "포인트 선물하기", path: "/give_point" }, // 실제 경로로 변경 필요
-    { name: "상품 구매하기", path: "/buying_goods" }, // 실제 경로로 변경 필요
-    { name: "마이페이지", path: "/mypage" }, // 실제 경로로 변경 필요
+    { name: "포인트 선물하기", path: "/give_point" },
+    { name: "상품 구매하기", path: "/buying_goods" },
+    { name: "마이페이지", path: "/mypage" },
   ];
 
   return (
