@@ -2,7 +2,7 @@ import "../styles/MyPage.css";
 import Header from "../components/common/Header";
 import useHeaderData from "../hooks/useHeaderData";
 import PointStatus from "../components/mypage/PointStatus";
-import Profile from "../components/mypage/profile";
+import Profile from "../components/mypage/Profile";
 
 const MyPage = () => {
   const { name, point } = useHeaderData();

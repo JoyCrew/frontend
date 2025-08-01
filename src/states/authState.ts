@@ -26,7 +26,7 @@ export const authState = atom<AuthState>({
         setSelf(JSON.parse(savedState));
       }
       onSet((newValue, _, isReset) => {
-        if (isReset) {
+        if (isReset || !newValue.isLoggedIn) {
           localStorage.removeItem("auth_state");
         } else {
           localStorage.setItem("auth_state", JSON.stringify(newValue));
