@@ -1,20 +1,50 @@
 import "../styles/Login.css";
 import { useState } from "react";
+import axios from "axios";
 import logo from "../assets/logo.svg";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 import Popup from "../components/login/Popup";
-import TextLink from "../components/login/TextLink";
 import InputField from "../components/login/InputField";
 import Button from "../components/common/Button";
+import { useNavigate } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { authState } from "../states/authState";
 
 const Login: React.FC = () => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const setAuthState = useSetRecoilState(authState);
 
-  const handleLogin = () => {
-    console.log("로그인 시도", email, password);
+  const nav = useNavigate();
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        `${API_BASE_URL}/api/auth/login`,
+        { email: email, password: password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log("로그인 성공", response.data);
+      const { accessToken, name, role, userId } = response.data;
+      setAuthState({
+        accessToken: accessToken,
+        email: email,
+        name: name,
+        role: role,
+        userId: userId,
+        isLoggedIn: true,
+      });
+      nav("/");
+    } catch (error) {
+      console.error("로그인 실패:", error);
+    }
   };
 
   const togglePasswordVisibility = () => {
@@ -25,11 +55,6 @@ const Login: React.FC = () => {
     <div className="Login">
       <Popup>
         <img src={logo} alt="logo" className="PopupLogo" />
-        <TextLink
-          prefixText="계정이 없으시다면?"
-          linkText="회원가입하기"
-          to="/signup"
-        />
         <InputField
           label="이메일"
           type="email"
@@ -44,20 +69,15 @@ const Login: React.FC = () => {
           name="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          rightText="비밀번호 찾기"
+          rightText="비밀번호 변경"
           onRightTextClick={() => {
-            console.log("비밀번호 찾기");
+            console.log("비밀번호 변경");
           }}
           icon={showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
           className="password"
           onIconClick={togglePasswordVisibility}
         />
         <Button text="로그인" onClick={handleLogin} className="login" />
-        <Button
-          text="구글 계정으로 로그인"
-          onClick={handleLogin}
-          className="google"
-        />
       </Popup>
     </div>
   );
