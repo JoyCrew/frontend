@@ -1,0 +1,71 @@
+.Profile {
+  /* Rectangle 34627654 */
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 15.3125rem;
+  height: 15.9375rem;
+  right: 6.1875rem;
+  top: 10.0625rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.Profile img {
+  /* Group 1948755304 */
+
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 2.375rem;
+}
+
+.Profile p {
+  /* 회원이름 */
+
+  position: absolute;
+  width: 3.9375rem;
+  height: 1.5625rem;
+  top: 8.375rem;
+
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 140%;
+  /* 또는 1.5625rem */
+  text-align: center;
+
+  /* gray scale/#21212F */
+  color: #21212f;
+}
+
+.Profile .button-container {
+  position: absolute;
+  width: 12.4375rem;
+  height: 2.125rem;
+  top: 11.4375rem;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.Profile .button-container button {
+  width: 6rem;
+  height: 2.125rem;
+
+  background: #f3f4f6;
+  border-radius: 1.25rem;
+
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 140%;
+  /* 상자 높이와 동일 또는 1.25rem */
+
+  /* gray scale/#626273 */
+  color: #626273;
+}
