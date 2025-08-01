@@ -5,7 +5,8 @@ interface PointHistoryItemProps {
 }
 
 const PointHistoryItem: React.FC<PointHistoryItemProps> = ({ entry }) => {
-  return <div className="PointHistoryItem">하이</div>;
+  console.log(entry);
+  return <div className="PointHistoryItem"></div>;
 };
 
 export default PointHistoryItem;

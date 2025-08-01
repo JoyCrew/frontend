@@ -20,30 +20,34 @@ const Header: React.FC<HeaderProps> = ({ name, point }) => {
   ];
 
   return (
-    <header className="Header">
-      <img className="logo" src={logo} alt="logo" />
-      <div className="navbar">
-        {navItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.path}
-            className={`nav-item ${
-              location.pathname === item.path ? `active active_${index}` : ""
-            }`}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
-      <div className="profile">
-        <img className="person" src={person} alt="person" />
-        <div className="ment">
-          <p className="name">{name}</p>
-          <p className="point">{point} points</p>
+    <div className="header-container">
+      <header className="Header">
+        <img className="logo" src={logo} alt="logo" />
+        <div className="navbar">
+          {navItems.map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              className={`nav-item ${
+                location.pathname === item.path ? `active active_${index}` : ""
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
-      </div>
-      <img className="alarm" src={alarm} alt="alarm" />
-    </header>
+        <div className="right-section">
+          <div className="profile">
+            <img className="person" src={person} alt="person" />
+            <div className="ment">
+              <p className="name">{name}</p>
+              <p className="point">{point} points</p>
+            </div>
+          </div>
+          <img className="alarm" src={alarm} alt="alarm" />
+        </div>
+      </header>
+    </div>
   );
 };
 

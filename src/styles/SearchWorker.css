@@ -1,9 +1,23 @@
+.GivePoint h1 {
+  position: absolute;
+  height: 1.125rem;
+  left: 38.75rem;
+  top: 3.9rem;
+
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.125rem;
+  /* 상자 높이와 동일 또는 56% */
+
+  color: #21212f;
+}
+
 .SearchWorker {
   position: absolute;
   width: 59.625rem;
   height: 14.375rem;
-  left: calc(50% - 59.625rem / 2 + 1.75rem);
-  top: 16.5rem;
+  left: 15.1875rem;
+  top: 8rem;
 
   background: #ffffff;
   box-shadow: 0.125rem 0.25rem 0.625rem rgba(217, 217, 217, 0.3);

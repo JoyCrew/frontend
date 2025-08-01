@@ -20,7 +20,7 @@ const SearchWorker: React.FC = () => {
       const response = await apiClient.get(`/api/employee/query`, {
         params: {
           keyword: searchTerm,
-          page: 0,
+          page: 0, //currentpage, totalpage에 따라 수정필요
           size: 10,
         },
       });

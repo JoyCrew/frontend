@@ -1,126 +1,106 @@
-.Header {
-  position: absolute;
-  width: 90rem;
+.header-container {
+  width: 100%;
   height: 4.9375rem;
   top: 0rem;
 
-  display: flex;
   background-color: #ffffff;
   box-shadow: 0.125rem 0.25rem 0.625rem rgba(217, 217, 217, 0.3);
 }
 
+.Header {
+  max-width: 80rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .Header .logo {
-  position: absolute;
   width: 9.0175rem;
   height: 1.9919rem;
-  left: 5.0625rem;
-  top: 1.4731rem;
 }
 
 .Header .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0rem;
   gap: 3.875rem;
-
-  position: absolute;
-  width: 32.125rem;
-  height: 1.3125rem;
-  left: 28.9375rem;
-  top: 1.8125rem;
 }
 
 .Header .navbar .nav-item {
+  position: relative;
   font-weight: 500;
   font-size: 1.125rem;
-
   color: #21212f;
-
-  /* 내부 오토레이아웃 */
   flex: none;
-  order: 3;
-  flex-grow: 0;
 }
 
 .nav-item.active::after {
   content: "";
   position: absolute;
   bottom: -1.625rem;
+  left: 50%;
+  transform: translateX(-50%);
   height: 0.25rem;
   background-color: #6b63e1;
 }
 
+/* 아래는 active_0, 1, 2, 3 클래스를 사용한 하드코딩 방식입니다.
+   position: absolute 대신 transform을 사용해 아이템 중앙에 맞춥니다.
+   이 방식은 아이템 너비가 고정되어 있을 때만 유효합니다.
+*/
 .nav-item.active_0::after {
-  left: -1.8125rem;
   width: 4.875rem;
 }
-
 .nav-item.active_1::after {
-  left: 3.875rem;
   width: 9rem;
 }
-
 .nav-item.active_2::after {
-  left: 14.6875rem;
   width: 8.375rem;
 }
-
 .nav-item.active_3::after {
-  left: 24.375rem;
   width: 7.75rem;
 }
 
+.Header .right-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
 .Header .profile {
-  position: absolute;
-  width: 11.25rem;
-  height: 3.875rem;
-  right: 9.625rem;
-  top: 0.6875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .Header .profile .person {
-  position: absolute;
   width: 2.875rem;
   height: 2.875rem;
-  left: 0.8125rem;
-  top: 0.5rem;
+}
+
+.Header .profile .ment {
+  display: flex;
+  flex-direction: column;
 }
 
 .Header .profile .ment .name {
-  position: absolute;
-  height: 1.375rem;
-  left: 4.5625rem;
-  top: 0.5625rem;
-
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 110%;
-
   color: #21212f;
-
-  /* 내부 오토레이아웃 */
-  flex: none;
-  order: 3;
-  flex-grow: 0;
 }
 
 .Header .profile .ment .point {
-  position: absolute;
-  height: 1.375rem;
-  left: 4.5625rem;
-  top: 2rem;
-
   font-size: 1rem;
   line-height: 140%;
-
   color: #626273;
 }
 
 .Header .alarm {
-  position: absolute;
   width: 3.875rem;
   height: 3.875rem;
-  right: 5rem;
-  top: 0.6875rem;
 }

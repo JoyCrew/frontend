@@ -1,10 +1,10 @@
 import { atom } from "recoil";
 
 export interface Employee {
-  profileImageUrl: string | null;
+  profileImageUrl: string | undefined;
   employeeName: string;
   departmentName: string;
-  position: string | null;
+  position: string | undefined;
 }
 
 export const searchResultState = atom<Employee[]>({

@@ -1,0 +1,58 @@
+.WorkerList {
+  position: absolute;
+  width: 59.625rem;
+  height: 17.625rem;
+  top: 25.125rem;
+  left: 15.1875rem;
+}
+
+.WorkerList .title {
+  position: absolute;
+  width: 59.625rem;
+  height: 2.875rem;
+
+  background: #dbd9ff;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.WorkerList .title p {
+  position: absolute;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  /* 상자 높이와 동일 또는 129% */
+
+  /* gray scale/#626273 */
+  color: #626273;
+}
+
+.WorkerList .title .name {
+  left: 6.9006rem;
+}
+
+.WorkerList .title .department {
+  left: 32.5625rem;
+}
+
+.WorkerList .title .position {
+  right: 11.375rem;
+}
+
+.WorkerList .item-container {
+  position: absolute;
+  top: 3.75rem;
+  width: 59.625rem;
+  height: 13.875rem;
+  background-color: blue;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  /* gray scale/#F3F4F6 */
+  border-bottom: 2px solid #f3f4f6;
+  box-shadow: 2px 4px 10px rgba(217, 217, 217, 0.3);
+  border-radius: 20px;
+}

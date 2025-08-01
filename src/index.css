@@ -30,11 +30,10 @@ body * {
 .main {
   position: absolute;
   width: 90rem;
-  height: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 html {
-  font-size: clamp(4.5px, 1.25vw, 18px);
+  font-size: clamp(4.5px, 1.25vw, 16px);
 }
