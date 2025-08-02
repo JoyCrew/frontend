@@ -1,0 +1,24 @@
+.TagButton {
+  width: 11.25rem;
+  height: 3.375rem;
+
+  border: 0.0625rem solid #6b63e1;
+
+  border-radius: 2.25rem;
+
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  /* 상자 높이와 동일 또는 112% */
+  text-align: center;
+}
+
+.TagButton_false {
+  background: #f8fbff;
+  color: #6b63e1;
+}
+
+.TagButton_true {
+  background: #6b63e1;
+  color: #ffffff;
+}
