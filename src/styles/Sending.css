@@ -1,0 +1,85 @@
+.Sending {
+  height: 53.4375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Sending .title {
+  position: absolute;
+  height: 4.4375rem;
+  top: 3.9rem;
+  left: 33.5rem;
+
+  display: flex;
+  gap: 0.75rem;
+}
+
+.Sending .title img {
+  width: 4.4375rem;
+  height: 4.4375rem;
+}
+
+.Sending .title h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 4.4375rem;
+  color: #21212f;
+}
+
+.Sending .point-container {
+  position: absolute;
+  top: 9.375rem;
+  left: 40.3125rem;
+  width: auto;
+  height: 4.375rem;
+
+  display: flex;
+  gap: 0.625rem;
+}
+
+.Sending .input-container {
+  box-sizing: border-box;
+  width: 5.75rem;
+  height: 4.375rem;
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.5rem;
+
+  display: flex;
+  gap: 0.425rem;
+}
+
+.Sending .point-container p {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 4.375rem;
+
+  color: #21212f;
+}
+
+.Sending .input-container input {
+  width: 4.2rem;
+  text-align: center;
+}
+
+/* 웹킷 기반 브라우저 (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+.Sending .input-container .arrow-container {
+  width: 0.75rem;
+  height: 2.125rem;
+  margin: auto 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
