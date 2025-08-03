@@ -75,6 +75,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 11.125rem;
+  height: 3.875rem;
+  padding-left: 0.6875rem;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 2.5rem;
 }
 
 .Header .profile .person {
@@ -85,6 +94,7 @@
 .Header .profile .ment {
   display: flex;
   flex-direction: column;
+  height: 2.875rem;
 }
 
 .Header .profile .ment .name {
@@ -98,6 +108,7 @@
   font-size: 1rem;
   line-height: 140%;
   color: #626273;
+  margin-top: 0.1875rem;
 }
 
 .Header .alarm {

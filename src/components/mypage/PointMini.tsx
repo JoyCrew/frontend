@@ -7,8 +7,10 @@ interface PointMiniProps {
 const PointMini: React.FC<PointMiniProps> = ({ point, ment, className }) => {
   return (
     <div className={`PointMini PointMini_${className}`}>
-      <h3>{point}</h3>
-      <p>{ment}</p>
+      <div className="content-container">
+        <h3>{point}</h3>
+        <p>{ment}</p>
+      </div>
     </div>
   );
 };

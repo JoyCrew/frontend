@@ -6,6 +6,8 @@ interface AuthState {
   name: string | null;
   role: string | null;
   userId: string | null;
+  totalPoint: number | null;
+  profileImageUrl: string | null;
   isLoggedIn: boolean;
 }
 
@@ -17,6 +19,8 @@ export const authState = atom<AuthState>({
     name: null,
     role: null,
     userId: null,
+    totalPoint: null,
+    profileImageUrl: null,
     isLoggedIn: false,
   },
   effects_UNSTABLE: [

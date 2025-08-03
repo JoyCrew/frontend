@@ -10,6 +10,7 @@ const GivePoint2: React.FC = () => {
   const allEmployess = useRecoilValue(searchResultState);
   const SelectedEmployee = allEmployess.find((emp) => emp.isSelected);
   const employeeData = SelectedEmployee || {
+    employeeId: 0,
     profileImageUrl: employeePerson,
     employeeName: "",
     departmentName: "",

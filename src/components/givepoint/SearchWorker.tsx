@@ -22,11 +22,11 @@ const SearchWorker: React.FC = () => {
         params: {
           keyword: searchTerm,
           page: 0, //currentpage, totalpage에 따라 수정필요
-          size: 10,
+          size: 20,
         },
       });
-      console.log("검색 성공");
-      const resultsWithSelection: Employee[] = response.data.map(
+      console.log("검색 성공", response.data);
+      const resultsWithSelection: Employee[] = response.data.employees.map(
         (
           employee: Omit<Employee, "isSelected" | "profileIamgeUrl"> & {
             profileImageUrl?: string;
