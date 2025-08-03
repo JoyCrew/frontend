@@ -1,14 +1,53 @@
 import "../../styles/WorkerList.css";
-
-import { useRecoilValue } from "recoil";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useRecoilState } from "recoil";
 import { searchResultState } from "../../states/searchResultState";
 import WorkerListItem from "./WorkerListItem";
 import type { Employee } from "../../states/searchResultState";
 import Button from "../common/Button";
 
 const WorkerList: React.FC = () => {
-  const searchResult = useRecoilValue(searchResultState);
-  console.log(searchResult, "직원 결과");
+  const nav = useNavigate();
+  const [searchResult, setSearchResult] = useRecoilState(searchResultState);
+  const [buttonClassName, setButtonClassName] = useState<string>("smallGray");
+
+  const handleToggle = (index: number) => {
+    setSearchResult((prevList) => {
+      const isAlreadySelected = prevList[index].isSelected;
+      const newList = prevList.map((employee, i) => {
+        return {
+          ...employee,
+          isSelected: !isAlreadySelected && i === index,
+        };
+      });
+      return newList;
+    });
+  };
+
+  useEffect(() => {
+    const selectedEmployee = searchResult.find(
+      (employee) => employee.isSelected
+    );
+    if (selectedEmployee) {
+      setButtonClassName("small");
+    } else {
+      setButtonClassName("smallGray");
+    }
+  }, [searchResult]);
+
+  const onClickButton = () => {
+    const selectedEmployee = searchResult.find(
+      (employee) => employee.isSelected
+    );
+
+    if (selectedEmployee) {
+      nav("/give_point/send/");
+    } else {
+      console.log("선택 필수");
+    }
+  };
+
   return (
     <div className="WorkerList">
       <div className="title">
@@ -19,19 +58,17 @@ const WorkerList: React.FC = () => {
       <div className="item-container">
         {searchResult.length > 0 ? (
           searchResult.map((employee: Employee, index: number) => (
-            <WorkerListItem key={index} employee={employee} />
+            <WorkerListItem
+              key={index}
+              employee={employee}
+              onToggle={() => handleToggle(index)}
+            />
           ))
         ) : (
           <p></p>
         )}
       </div>
-      <Button
-        text="다음"
-        onClick={() => {
-          console.log("선택해야함");
-        }}
-        className="smallGrey"
-      />
+      <Button text="다음" onClick={onClickButton} className={buttonClassName} />
     </div>
   );
 };

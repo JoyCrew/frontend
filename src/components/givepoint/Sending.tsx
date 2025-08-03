@@ -4,8 +4,12 @@ import Tag from "./Tag";
 import Message from "./Message";
 import up from "../../assets/up.svg";
 import down from "../../assets/down.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { ChangeEvent } from "react";
+import Button from "../common/Button";
+import { useNavigate } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import { TagState } from "../../states/tagState";
 
 const MIN_POINT = 0;
 const MAX_POINT = 999999;
@@ -15,7 +19,20 @@ interface SendingProps {
 }
 
 const Sending: React.FC<SendingProps> = ({ employee }) => {
+  const nav = useNavigate();
+  const [buttonClassName, setButtonClassName] = useState<string>("smallGray");
   const [point, setPoint] = useState<number | null>(0);
+
+  const tagState = useRecoilValue(TagState);
+  useEffect(() => {
+    const isTagSelected = tagState.some((tag) => tag.isSelected);
+    if (isTagSelected) {
+      setButtonClassName("small");
+    } else {
+      setButtonClassName("smallGray");
+    }
+  }, [tagState]);
+
   const handleIncrease = () => {
     const currentPoint = point ?? 0;
     if (currentPoint < MAX_POINT) {
@@ -45,6 +62,14 @@ const Sending: React.FC<SendingProps> = ({ employee }) => {
     }
   };
 
+  const onClickButton = () => {
+    if (buttonClassName == "smallGray") {
+      console.log("클릭x");
+    } else {
+      nav("/");
+    }
+  };
+
   return (
     <div className="Sending">
       <div className="title">
@@ -68,6 +93,7 @@ const Sending: React.FC<SendingProps> = ({ employee }) => {
       </div>
       <Tag />
       <Message />
+      <Button text="다음" onClick={onClickButton} className={buttonClassName} />
     </div>
   );
 };

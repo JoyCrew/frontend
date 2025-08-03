@@ -1,6 +1,7 @@
 import "../../styles/SearchWorker.css";
 import searching from "../../assets/searching.svg";
 import enter from "../../assets/enter.svg";
+import employeePerson from "../../assets/employeePerson.svg";
 import { useState } from "react";
 import apiClient from "../../api/axiosClient";
 import { useSetRecoilState } from "recoil";
@@ -25,8 +26,18 @@ const SearchWorker: React.FC = () => {
         },
       });
       console.log("검색 성공");
-      const results: Employee[] = response.data;
-      setSearchResults(results);
+      const resultsWithSelection: Employee[] = response.data.map(
+        (
+          employee: Omit<Employee, "isSelected" | "profileIamgeUrl"> & {
+            profileImageUrl?: string;
+          }
+        ) => ({
+          ...employee,
+          isSelected: false,
+          profileImageUrl: employee.profileImageUrl || employeePerson,
+        })
+      );
+      setSearchResults(resultsWithSelection);
     } catch (error) {
       console.log(error);
       setSearchResults([]);

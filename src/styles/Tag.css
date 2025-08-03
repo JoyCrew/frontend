@@ -3,10 +3,10 @@
   width: 57.5625rem;
   height: 12.125rem;
   left: 16.1875rem;
-  top: 16rem;
+  top: 13.3rem;
 }
 
-.Tag .title {
+.givePoint-title {
   position: absolute;
   height: 1.875rem;
   top: 0;
@@ -15,13 +15,12 @@
   gap: 0.75rem;
 }
 
-.Tag .title img {
+.givePoint-title img {
   width: 1.875rem;
   height: 1.875rem;
 }
 
-.Tag .title h3 {
-  height: 1.125rem;
+.givePoint-title h3 {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.875rem;

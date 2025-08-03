@@ -4,12 +4,21 @@ import employeePerson from "../../assets/employeePerson.svg";
 
 interface WorkerListItemProps {
   employee: Employee;
+  onToggle: () => void;
 }
 
-const WorkerListItem: React.FC<WorkerListItemProps> = ({ employee }) => {
+const WorkerListItem: React.FC<WorkerListItemProps> = ({
+  employee,
+  onToggle,
+}) => {
   return (
     <div className="WorkerListItem">
-      <input type="checkbox" className="checkbox" />
+      <input
+        type="checkbox"
+        className="checkbox"
+        checked={employee.isSelected}
+        onChange={onToggle}
+      />
       <div className="info-container">
         <div className="image-name">
           <img

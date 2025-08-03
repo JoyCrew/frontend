@@ -8,7 +8,7 @@
 .Sending .title {
   position: absolute;
   height: 4.4375rem;
-  top: 3.9rem;
+  top: 2.73rem;
   left: 33.5rem;
 
   display: flex;
@@ -29,7 +29,7 @@
 
 .Sending .point-container {
   position: absolute;
-  top: 9.375rem;
+  top: 8.375rem;
   left: 40.3125rem;
   width: auto;
   height: 4.375rem;
@@ -82,4 +82,10 @@ input[type="number"]:focus {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.Sending .Button {
+  position: absolute;
+  right: 15.1875rem;
+  bottom: 4.5rem;
 }
