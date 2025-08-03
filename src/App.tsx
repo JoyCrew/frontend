@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import MyPage from "./pages/MyPage";
 import GivePoint from "./pages/GivePoint";
+import GivePoint2 from "./pages/GivePoint2";
 import BuyingGoods from "./pages/BuyingGoods";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/give_point" element={<GivePoint />} />
+            <Route path="/give_point/send" element={<GivePoint2 />} />
             <Route path="/buying_goods" element={<BuyingGoods />} />
           </Routes>
         </BrowserRouter>

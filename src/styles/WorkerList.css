@@ -1,0 +1,91 @@
+.WorkerList {
+  position: absolute;
+  width: 59.625rem;
+  height: 17.625rem;
+  top: 25.125rem;
+  left: 15.1875rem;
+}
+
+.WorkerList .title {
+  position: absolute;
+  width: 59.625rem;
+  height: 2.875rem;
+
+  background: #dbd9ff;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.WorkerList .title p {
+  position: absolute;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  /* 상자 높이와 동일 또는 129% */
+
+  /* gray scale/#626273 */
+  color: #626273;
+}
+
+.WorkerList .title .name {
+  left: 6.9006rem;
+}
+
+.WorkerList .title .department {
+  left: 32.5625rem;
+}
+
+.WorkerList .title .position {
+  right: 11.375rem;
+}
+
+.WorkerList .item-container {
+  position: absolute;
+  top: 3.75rem;
+  width: 59.625rem;
+  height: 13.875rem;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  /* gray scale/#F3F4F6 */
+  border-bottom: 2px solid #f3f4f6;
+  box-shadow: 2px 4px 10px rgba(217, 217, 217, 0.3);
+  border-radius: 20px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* 1. 스크롤바 전체 영역 */
+.WorkerList .item-container::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 폭 */
+  height: 8px;
+}
+
+/* 2. 스크롤바의 배경 (track) */
+.WorkerList .item-container::-webkit-scrollbar-track {
+  background: transparent; /* 스크롤바 배경을 투명하게 */
+  border-radius: 5.5px;
+}
+
+/* 3. 스크롤바의 스크롤 핸들 (thumb) */
+.WorkerList .item-container::-webkit-scrollbar-thumb {
+  background-color: #6b63e1; /* 스크롤 핸들 색상 */
+  border-radius: 5.5px; /* 모서리 둥글게 */
+  border: 1px solid transparent;
+  background-clip: padding-box; /* padding-box 내에서만 배경색 적용 */
+}
+
+/* 4. 스크롤바 화살표(버튼) 없애기 */
+.WorkerList .item-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.WorkerList .Button {
+  position: absolute;
+  top: 20.2rem;
+  right: 0;
+}

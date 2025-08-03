@@ -18,3 +18,28 @@
 
   color: #ffffff;
 }
+
+.Button_small {
+  width: 11.4375rem;
+  height: 3.5625rem;
+
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+  /* 상자 높이와 동일 또는 90% */
+  border-radius: 0.8125rem;
+  box-shadow: none;
+}
+
+.Button_smallGray {
+  width: 11.4375rem;
+  height: 3.5625rem;
+
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+  background: #c1c4c9;
+  border-radius: 0.8125rem;
+  color: #ffffff;
+  box-shadow: none;
+}

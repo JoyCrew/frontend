@@ -5,10 +5,9 @@ const BuyingGoods: React.FC = () => {
   const { name, point } = useHeaderData();
 
   return (
-    <div className="main">
-      <div className="BuyingGoods">
-        <Header name={name} point={point} />
-      </div>
+    <div className="BuyingGoods">
+      <Header name={name} point={point} />
+      <div className="main">하이루</div>
     </div>
   );
 };

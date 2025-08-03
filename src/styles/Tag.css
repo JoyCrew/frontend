@@ -1,0 +1,38 @@
+.Tag {
+  position: absolute;
+  width: 57.5625rem;
+  height: 12.125rem;
+  left: 16.1875rem;
+  top: 13.3rem;
+}
+
+.givePoint-title {
+  position: absolute;
+  height: 1.875rem;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.givePoint-title img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.givePoint-title h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+
+  color: #21212f;
+}
+
+.Tag .button-container {
+  position: absolute;
+  top: 3.875rem;
+  gap: 1.5rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

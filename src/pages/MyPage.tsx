@@ -7,9 +7,9 @@ import Profile from "../components/mypage/Profile";
 const MyPage = () => {
   const { name, point } = useHeaderData();
   return (
-    <div className="main">
-      <div className="MyPage">
-        <Header name={name} point={point} />
+    <div className="MyPage">
+      <Header name={name} point={point} />
+      <div className="main">
         <PointStatus />
         <Profile />
       </div>
