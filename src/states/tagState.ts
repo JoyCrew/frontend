@@ -9,35 +9,35 @@ export const TagState = atom<TagState[]>({
   key: "tagState",
   default: [
     {
-      name: "태그1",
+      name: "Customers",
       isSelected: false,
     },
     {
-      name: "태그2",
+      name: "Flexibility",
       isSelected: false,
     },
     {
-      name: "태그3",
+      name: "Goals",
       isSelected: false,
     },
     {
-      name: "태그4",
+      name: "Extraordinary",
       isSelected: false,
     },
     {
-      name: "태그5",
+      name: "Teamwork",
       isSelected: false,
     },
     {
-      name: "태그6",
+      name: "Innovation",
       isSelected: false,
     },
     {
-      name: "태그7",
+      name: "Simplicity",
       isSelected: false,
     },
     {
-      name: "태그8",
+      name: "Deliver Results",
       isSelected: false,
     },
   ],
