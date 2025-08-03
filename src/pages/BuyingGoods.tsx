@@ -7,7 +7,7 @@ const BuyingGoods: React.FC = () => {
   return (
     <div className="BuyingGoods">
       <Header name={name} point={point} />
-      <div className="main">하이루</div>
+      <div className="main"></div>
     </div>
   );
 };

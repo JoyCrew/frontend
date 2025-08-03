@@ -32,13 +32,16 @@ const Login: React.FC = () => {
         }
       );
       console.log("로그인 성공", response.data);
-      const { accessToken, name, role, userId } = response.data;
+      const { accessToken, name, role, userId, totalPoint, profileImageUrl } =
+        response.data;
       setAuthState({
         accessToken: accessToken,
         email: email,
         name: name,
         role: role,
         userId: userId,
+        totalPoint: totalPoint,
+        profileImageUrl: profileImageUrl,
         isLoggedIn: true,
       });
       nav("/");

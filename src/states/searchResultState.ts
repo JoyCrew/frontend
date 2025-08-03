@@ -1,6 +1,7 @@
 import { atom } from "recoil";
 
 export interface Employee {
+  employeeId: number;
   profileImageUrl: string | undefined;
   employeeName: string;
   departmentName: string;

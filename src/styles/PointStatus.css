@@ -1,11 +1,12 @@
 .PointStatus {
   position: absolute;
-  width: 9.6875rem;
+  width: 10.3125rem;
   height: 18.4375rem;
   top: 2.625rem;
-  left: 5.75rem;
+  left: 5.25rem;
 }
-.PointStatus p {
+
+.PointStatus .title {
   position: absolute;
   width: 5.75rem;
   height: 1.5rem;
@@ -23,44 +24,48 @@
 
 .PointStatus .PointMini {
   position: absolute;
-  width: 9.6875rem;
-  height: 7.5rem;
+  width: 10.3125rem;
+  height: 8.4375rem;
   left: 0rem;
-  background: #f4f6ff;
-  border: 0.0625rem solid #ffffff;
   border-radius: 1.25rem;
 }
 
+.PointMini .content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .PointStatus .PointMini h3 {
-  position: absolute;
-  top: 1.25rem;
-  left: 3.1875rem;
-  width: 3.25rem;
   font-weight: 600;
-  font-size: 2.75rem;
-  line-height: 3.3125rem;
-  /* 상자 높이와 동일 */
-  /* gray scale/#21212F */
+  font-size: 2.25rem;
   color: #21212f;
   text-align: center;
+  width: 100%;
 }
 
 .PointStatus .PointMini p {
-  position: absolute;
-  left: 2.75rem;
-  top: 4.8125rem;
-  width: 4.125rem;
+  position: inherit;
   font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.0625rem;
-  /* 상자 높이와 동일 */
+  font-size: 0.75rem;
+  color: #626273;
   text-align: center;
+  width: 100%;
 }
 
-.PointStatus .PointMini_receive {
+.PointStatus .PointMini_buy {
   top: 2.5rem;
+
+  background: #dbd9ff;
+  border: 1px solid #f3f4f6;
 }
 
-.PointStatus .PointMini_send {
-  top: 10.9375rem;
+.PointStatus .PointMini_give {
+  top: 11.9375rem;
+  height: 6.5rem;
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
 }

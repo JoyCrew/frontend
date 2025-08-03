@@ -9,7 +9,7 @@ import apiClient from "../../api/axiosClient";
 const Profile: React.FC = () => {
   const nav = useNavigate();
   const auth = useRecoilValue(authState);
-  const { name } = auth;
+  const { name, profileImageUrl } = auth;
   const setAuthState = useSetRecoilState(authState);
 
   const handleLogout = async () => {
@@ -22,6 +22,8 @@ const Profile: React.FC = () => {
         name: null,
         role: null,
         userId: null,
+        totalPoint: null,
+        profileImageUrl: null,
         isLoggedIn: false,
       });
       nav("/");
@@ -33,13 +35,18 @@ const Profile: React.FC = () => {
         name: null,
         role: null,
         userId: null,
+        totalPoint: null,
+        profileImageUrl: null,
         isLoggedIn: false,
       });
     }
   };
   return (
     <div className="Profile">
-      <img src={profile} alt="프로필 사진" />
+      <img
+        src={profileImageUrl ? profileImageUrl : profile}
+        alt="프로필 사진"
+      />
       <p>{name}</p>
       <div className="button-container">
         <button>정보 수정</button>
