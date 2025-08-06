@@ -1,0 +1,103 @@
+.EmployeeList .WorkerList {
+  top: 10.75rem;
+  left: 23.375rem;
+}
+
+.EmployeeList .item-container {
+  height: 37rem;
+}
+
+.EmployeeList h1 {
+  position: absolute;
+  left: 23.5625rem;
+  top: 3.125rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}
+
+.EmployeeUpload {
+  width: 59.4375rem;
+  height: 2.25rem;
+  position: absolute;
+  top: 7.25rem;
+  left: 23.5625rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.EmployeeUpload .input-container {
+  width: 16.0625rem;
+  height: 2.25rem;
+
+  box-sizing: border-box;
+
+  border: 0.125rem solid #c7c3ff;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+}
+
+.EmployeeUpload .input-container input {
+  outline: none;
+}
+
+.EmployeeUpload .input-container img {
+  position: absolute;
+  top: 0.07rem;
+  left: 14rem;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.EmployeeUpload .Button {
+  position: inherit;
+  width: 7.5rem;
+  height: 2.25rem;
+
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 2.25rem;
+
+  border: 0.0625rem solid #e5e5ea;
+  box-shadow: 0.125rem 0.125rem 0.5rem rgba(217, 217, 217, 0.2);
+  border-radius: 0.5rem;
+}
+
+.EmployeeUpload .right-container {
+  width: 17.625rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.EmployeeUpload .right-container img {
+  width: 1.25rem;
+  height: 1.25rem;
+  align-self: center;
+}
+
+/* 기본 상태: information-bubble을 숨김 */
+.EmployeeUpload .information-bubble {
+  display: none; /* 화면에서 완전히 제거 */
+  /* 또는 opacity: 0; visibility: hidden; 로 투명하게 숨길 수도 있습니다. */
+
+  /* 말풍선 스타일 */
+  position: absolute;
+  top: -160%;
+  left: 0;
+
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  z-index: 100; /* 다른 요소 위에 표시되도록 */
+}
+
+/* img에 hover할 때 information-bubble을 표시 */
+.EmployeeUpload .right-container img:hover + .information-bubble {
+  display: block;
+}

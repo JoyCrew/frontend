@@ -1,16 +1,8 @@
 import { atom } from "recoil";
+import type { Employee } from "./searchResultState";
 
-export interface Employee {
-  employeeId: number;
-  profileImageUrl: string | undefined;
-  employeeName: string;
-  departmentName: string;
-  position: string | undefined;
-  isSelected: boolean;
-}
-
-export const searchResultState = atom<Employee[]>({
-  key: "searchResultState",
+export const allEmployeeState = atom<Employee[]>({
+  key: "allEmployeeState",
   default: [
     {
       employeeId: 1,
@@ -90,6 +82,54 @@ export const searchResultState = atom<Employee[]>({
       employeeName: "송혜교",
       departmentName: "사업개발팀",
       position: "수석",
+      isSelected: false,
+    },
+    {
+      employeeId: 1,
+      profileImageUrl: "",
+      employeeName: "김민준",
+      departmentName: "경영지원팀",
+      position: "매니저",
+      isSelected: false,
+    },
+    {
+      employeeId: 2,
+      profileImageUrl: "",
+      employeeName: "박서연",
+      departmentName: "마케팅팀",
+      position: "팀장",
+      isSelected: false,
+    },
+    {
+      employeeId: 3,
+      profileImageUrl: "",
+      employeeName: "이지은",
+      departmentName: "영업팀",
+      position: "사원",
+      isSelected: false,
+    },
+    {
+      employeeId: 4,
+      profileImageUrl: "",
+      employeeName: "정우성",
+      departmentName: "개발팀",
+      position: "선임",
+      isSelected: false,
+    },
+    {
+      employeeId: 5,
+      profileImageUrl: "",
+      employeeName: "최유진",
+      departmentName: "디자인팀",
+      position: "주니어",
+      isSelected: false,
+    },
+    {
+      employeeId: 6,
+      profileImageUrl: "",
+      employeeName: "강동원",
+      departmentName: "인사팀",
+      position: "과장",
       isSelected: false,
     },
   ],

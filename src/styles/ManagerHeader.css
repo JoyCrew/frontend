@@ -1,0 +1,23 @@
+.manager-header-container {
+  width: 100%;
+  height: 4.25rem;
+  top: 0rem;
+  background-color: #6b63e1;
+  box-shadow: 0px 4px 12.8px rgba(0, 0, 0, 0.08);
+}
+
+.ManagerHeader {
+  max-width: 80rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ManagerHeader img {
+  width: 9.0175rem;
+  height: 1.9919rem;
+}
