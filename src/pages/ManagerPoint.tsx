@@ -6,7 +6,7 @@ const ManagerPoint: React.FC = () => {
     <div className="ManagerPoint">
       <ManagerHeader />
       <div className="main">
-        <Sidebar />
+        <Sidebar props="point" />
       </div>
     </div>
   );

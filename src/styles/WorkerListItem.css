@@ -12,11 +12,21 @@
 }
 
 .WorkerListItem .checkbox {
+  appearance: none;
   margin-left: 2.9375rem;
 
   width: 1.25rem;
   height: 1.25rem;
   border: 0.0625rem solid #6b63e1;
+  border-radius: 2px;
+}
+
+.WorkerListItem .checkbox:checked {
+  background-color: #6b63e1;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 .WorkerListItem .info-container {

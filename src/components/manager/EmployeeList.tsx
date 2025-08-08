@@ -1,5 +1,5 @@
 import "../../styles/EmployeeList.css";
-import { allEmployeeState } from "../../states/AllEmployeeState";
+import { allEmployeeState } from "../../states/allEmployeeState";
 import type { Employee } from "../../states/searchResultState";
 import WorkerListItem from "../givepoint/WorkerListItem";
 import useEmployeeSelection from "../../hooks/useEmployeeSelection";

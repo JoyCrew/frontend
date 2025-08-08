@@ -7,7 +7,7 @@ const Manager: React.FC = () => {
     <div className="Manager">
       <ManagerHeader />
       <div className="main">
-        <Sidebar />
+        <Sidebar props="employee" />
         <EmployeeList />
       </div>
     </div>
