@@ -74,7 +74,7 @@ const Login: React.FC = () => {
           onChange={(e) => setPassword(e.target.value)}
           rightText="비밀번호 변경"
           onRightTextClick={() => {
-            console.log("비밀번호 변경");
+            nav("/email_verification");
           }}
           icon={showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
           className="password"
