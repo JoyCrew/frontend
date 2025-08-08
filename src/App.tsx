@@ -4,6 +4,7 @@ import { RecoilRoot } from "recoil";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import EmailVerification from "./pages/EmailVerification";
+import ChangePassword from "./pages/ChangePassword";
 import MyPage from "./pages/MyPage";
 import GivePoint from "./pages/GivePoint";
 import GivePoint2 from "./pages/GivePoint2";
@@ -23,6 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/email_verification" element={<EmailVerification />} />
+            <Route path="change_password" element={<ChangePassword />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/give_point" element={<GivePoint />} />
             <Route path="/give_point/send" element={<GivePoint2 />} />
