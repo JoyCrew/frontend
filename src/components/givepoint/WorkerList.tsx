@@ -1,7 +1,7 @@
 import "../../styles/WorkerList.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useRecoilState } from "recoil";
+import useEmployeeSelection from "../../hooks/useEmployeeSelection";
 import { searchResultState } from "../../states/searchResultState";
 import WorkerListItem from "./WorkerListItem";
 import type { Employee } from "../../states/searchResultState";
@@ -9,21 +9,9 @@ import Button from "../common/Button";
 
 const WorkerList: React.FC = () => {
   const nav = useNavigate();
-  const [searchResult, setSearchResult] = useRecoilState(searchResultState);
+  const { list: searchResult, handleToggle } =
+    useEmployeeSelection(searchResultState);
   const [buttonClassName, setButtonClassName] = useState<string>("smallGray");
-
-  const handleToggle = (index: number) => {
-    setSearchResult((prevList) => {
-      const isAlreadySelected = prevList[index].isSelected;
-      const newList = prevList.map((employee, i) => {
-        return {
-          ...employee,
-          isSelected: !isAlreadySelected && i === index,
-        };
-      });
-      return newList;
-    });
-  };
 
   useEffect(() => {
     const selectedEmployee = searchResult.find(

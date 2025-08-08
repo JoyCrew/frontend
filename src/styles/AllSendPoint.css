@@ -1,0 +1,31 @@
+.AllSendPoint .title .department {
+  left: 34.125rem;
+}
+
+.AllSendPoint .title .position {
+  left: 45.0625rem;
+}
+
+.AllSendPoint .title .point {
+  left: 52.6875rem;
+}
+
+.AllSendPoint .WorkerList {
+  left: 23.375rem;
+  top: 12.875rem;
+}
+
+.AllSendPoint .item-container {
+  height: 37rem;
+}
+
+.AllSendPoint h1 {
+  position: absolute;
+  left: 23.5625rem;
+  top: 3.125rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}
