@@ -21,9 +21,10 @@ const EmployeeUpload: React.FC = () => {
           <br />
           csv 파일을 업로드하세요
         </div>
-        {/* 말풍선 css 수정 필요 */}
+
         <Button text="파일 업로드" className="small" onClick={onClickbutton} />
         <Button text="직원 등록" className="small" onClick={onClickbutton} />
+        <Button text="직원 삭제" className="small" onClick={onClickbutton} />
       </div>
     </div>
   );

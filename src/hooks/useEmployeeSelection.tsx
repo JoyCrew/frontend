@@ -1,15 +1,16 @@
 import { RecoilState, useRecoilState } from "recoil";
-import type { Employee } from "../states/searchResultState";
 
-const useEmployeeSelection = (state: RecoilState<Employee[]>) => {
+const useEmployeeSelection = <T extends { isSelected: boolean }>(
+  state: RecoilState<T[]>
+) => {
   const [list, setList] = useRecoilState(state);
 
   const handleToggle = (index: number) => {
     setList((prevList) => {
       const isAlreadySelected = prevList[index].isSelected;
-      const newList = prevList.map((employee, i) => {
+      const newList = prevList.map((item, i) => {
         return {
-          ...employee,
+          ...item,
           isSelected: !isAlreadySelected && i === index,
         };
       });

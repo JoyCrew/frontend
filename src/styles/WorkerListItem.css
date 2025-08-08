@@ -31,6 +31,7 @@
 
 .WorkerListItem .info-container {
   display: flex;
+  height: 100%;
 }
 
 .WorkerListItem .image-name {
@@ -54,19 +55,60 @@
   color: #21212f;
 }
 
-.WorkerListItem .department {
+.WorkerListItem .department,
+.WorkerListItem .position,
+.WorkerListItem .joining,
+.WorkerListItem .birth,
+.WorkerListItem .point {
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 4.625rem;
-  width: 13.6rem;
 
   color: #9ca2ae;
 }
 
-.WorkerListItem .position {
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 4.625rem;
+.WorkerListItem.department {
+  width: 13.6rem;
+}
 
-  color: #9ca2ae;
+.EmployeeListItem .WorkerListItem .image-name {
+  width: 16.6rem;
+}
+
+.EmployeeListItem .WorkerListItem .department {
+  width: 9.2rem;
+}
+
+.EmployeeListItem .WorkerListItem .position {
+  width: 9.9rem;
+}
+
+.EmployeeListItem .WorkerListItem .joining {
+  width: 9.9rem;
+}
+
+.AllSendPoint .WorkerListItem .image-name {
+  width: 27.5em;
+}
+
+.AllSendPoint .WorkerListItem .department {
+  width: 11.2rem;
+}
+
+.AllSendPoint .WorkerListItem .position {
+  width: 7.3rem;
+}
+
+.AllSendPoint .WorkerListItem .point {
+  background-color: #f4f6ff;
+  width: 4.6875rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  /* 상자 높이와 동일 */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #21212f;
 }

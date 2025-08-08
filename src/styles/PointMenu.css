@@ -1,0 +1,29 @@
+.PointMenu {
+  position: absolute;
+  width: 59.625rem;
+  height: 7.1875rem;
+  left: 23.375rem;
+  top: 4.625rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+}
+
+.PointMenu .Button {
+  top: 0px;
+  right: 0px;
+  width: 7.5rem;
+  height: 2.25rem;
+
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 2.25rem;
+  border-radius: 0.5rem;
+}
+
+.PointMenu .point-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.2rem;
+}

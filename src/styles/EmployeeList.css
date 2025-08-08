@@ -67,7 +67,7 @@
 }
 
 .EmployeeUpload .right-container {
-  width: 17.625rem;
+  width: 25.875rem;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -124,4 +124,20 @@
 /* img에 hover할 때 information-bubble을 표시 */
 .EmployeeUpload .right-container img:hover + .information-bubble {
   display: block;
+}
+
+.EmployeeList .title .department {
+  left: 23.1875rem;
+}
+
+.EmployeeList .title .position {
+  left: 32.2631rem;
+}
+
+.EmployeeList .title .joining {
+  left: 42.1381rem;
+}
+
+.EmployeeList .title .birth {
+  left: 52.0131rem;
 }
