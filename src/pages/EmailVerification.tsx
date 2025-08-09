@@ -4,6 +4,7 @@ import Popup from "../components/login/Popup";
 import InputField from "../components/login/InputField";
 import Button from "../components/common/Button";
 import { useState } from "react";
+import apiClient from "../api/axiosClient";
 
 const EmailVerification: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -14,8 +15,22 @@ const EmailVerification: React.FC = () => {
     return emailRegex.test(email);
   };
 
-  const handleEmailChange = () => {
-    setIsEmailValid(validateEmail(email));
+  const handleEmailChange = async () => {
+    const isValid = validateEmail(email);
+    setIsEmailValid(isValid);
+    if (isValid) {
+      try {
+        const response = await apiClient.post(
+          `/api/auth/send-reset-password-email`,
+          { email: email }
+        );
+        console.log("이메일 전송 성공", response.data);
+      } catch (error) {
+        console.error("이메일 전송 실패:", error);
+      }
+    } else {
+      console.log("유효하지 않은 이메일입니다.");
+    }
   };
 
   return (

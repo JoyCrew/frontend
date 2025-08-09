@@ -11,7 +11,7 @@ const ManagerHeader: React.FC = () => {
           src={wwhitelogo}
           alt="logo"
           onClick={() => {
-            nav("/");
+            nav("/home");
           }}
         />
       </div>

@@ -20,11 +20,11 @@ function App() {
       <RecoilRoot>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
             {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/email_verification" element={<EmailVerification />} />
-            <Route path="change_password" element={<ChangePassword />} />
+            <Route path="/reset-password" element={<ChangePassword />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/give_point" element={<GivePoint />} />
             <Route path="/give_point/send" element={<GivePoint2 />} />
