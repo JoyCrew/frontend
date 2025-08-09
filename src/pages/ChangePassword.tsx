@@ -54,7 +54,7 @@ const ChangePassword: React.FC = () => {
         <InputField
           label="비밀번호 변경"
           type="password"
-          name="password"
+          name="password1"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="password"
@@ -62,7 +62,7 @@ const ChangePassword: React.FC = () => {
         <InputField
           label="비밀번호 확인"
           type="password"
-          name="password"
+          name="password2"
           value={password2}
           onChange={(e) => setPassword2(e.target.value)}
           className="password-check"

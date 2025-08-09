@@ -49,7 +49,7 @@ const Profile: React.FC = () => {
       />
       <p>{name}</p>
       <div className="button-container">
-        <button>정보 수정</button>
+        <button>내 정보</button>
         <button onClick={handleLogout}>로그아웃</button>
       </div>
     </div>
