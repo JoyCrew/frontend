@@ -1,0 +1,56 @@
+.GoodsCategory {
+  width: 100%;
+  height: 12.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.GoodsCategory .category-container {
+  display: flex;
+  margin-top: 4.125rem;
+  gap: 1.75rem;
+}
+
+.GoodsCategory .category-container p {
+  height: 1.125rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.125rem;
+
+  color: #626273;
+}
+
+.GoodsCategory .input-container {
+  width: 23.5625rem;
+  height: 2.75rem;
+  margin-top: 3.6875rem;
+  margin-left: 5.625rem;
+  background: #ffffff;
+  border: 0.0625rem solid #e5e5ea;
+  border-radius: 1.375rem;
+
+  display: flex;
+}
+
+.GoodsCategory .input-container input {
+  height: 1.125rem;
+  width: 21.3rem;
+
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.125rem;
+
+  outline: none;
+  padding: 1.34rem;
+}
+
+.GoodsCategory .input-container input::placeholder {
+  color: #9ca2ae;
+}
+
+.GoodsCategory .input-container .search-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: #c7c3ff;
+  margin-top: 0.7rem;
+}
