@@ -1,31 +1,32 @@
+import "../../styles/PointHistoryCard.css";
 import PointHistoryItem from "./PointHistoryItem";
+import { useRecoilState } from "recoil";
+import { pointHistoryState } from "../../states/pointHistoryState";
+import apiClient from "../../api/axiosClient";
+import { useEffect } from "react";
 
-export interface PointHistoryEntry {
-  id: number;
-  date: string;
-  name: string;
-  time: string;
-  activity: string;
-  amount: number;
-}
+const PointHistoryCard: React.FC = () => {
+  const [history, setHistory] = useRecoilState(pointHistoryState);
 
-interface PointHistoryCardProps {
-  historyEntries: PointHistoryEntry[];
-}
+  useEffect(() => {
+    const getPointHistory = async () => {
+      try {
+        const response = await apiClient.get(`/api/transactions`);
+        setHistory(response.data);
+        console.log("성공", response.data);
+      } catch (error) {
+        console.error("실패", error);
+      }
+    };
+    getPointHistory();
+  }, [setHistory]);
 
-const PointHistoryCard: React.FC<PointHistoryCardProps> = ({
-  historyEntries,
-}) => {
   return (
     <div className="PointHistoryCard">
-      <div className="card-header">
-        <h2 className="card-title">포인트 내역</h2>
-        <span className="card-arrow">&gt;</span>{" "}
-        {/* 화살표 아이콘 또는 Link 컴포넌트 */}
-      </div>
+      <h2 className="title">포인트 사용 내역</h2>
       <div className="card-list-container">
-        {historyEntries.map((entry) => (
-          <PointHistoryItem key={entry.id} entry={entry} />
+        {history.map((entry) => (
+          <PointHistoryItem key={entry.transactionId} entry={entry} />
         ))}
       </div>
     </div>

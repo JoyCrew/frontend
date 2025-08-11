@@ -58,14 +58,12 @@
   width: 6rem;
   height: 2.125rem;
 
-  background: #f3f4f6;
-  border-radius: 1.25rem;
-
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 140%;
-  /* 상자 높이와 동일 또는 1.25rem */
 
-  /* gray scale/#626273 */
-  color: #626273;
+  color: #ffffff;
+
+  background: #626273;
+  border-radius: 1.25rem;
 }

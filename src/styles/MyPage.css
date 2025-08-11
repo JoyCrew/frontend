@@ -1,22 +1,10 @@
-.PointStatus {
-  position: absolute;
-  width: 155px;
-  height: 295px;
-  top: 121px;
-  left: 84px;
-}
-.PointStatus p {
-  position: absolute;
-  width: 92px;
-  height: 24px;
-  left: 8px;
-  top: 0px;
+.MyPage .top-container {
+  width: 56.8125rem;
+  height: 18.4375rem;
+  margin-top: 2.625rem;
+  margin-left: 5.25rem;
 
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  /* 상자 높이와 동일 */
-
-  /* gray scale/#21212F */
-  color: #21212f;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
 }

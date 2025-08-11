@@ -4,6 +4,7 @@ import useHeaderData from "../hooks/useHeaderData";
 import PointStatus from "../components/mypage/PointStatus";
 import Profile from "../components/mypage/Profile";
 import useMyInfo from "../hooks/useMyInfo";
+import PointHistoryCard from "../components/mypage/PointHistory";
 
 const MyPage = () => {
   const { name, point } = useHeaderData();
@@ -12,7 +13,11 @@ const MyPage = () => {
     <div className="MyPage">
       <Header name={name} point={point} />
       <div className="main">
-        <PointStatus />
+        <div className="top-container">
+          <PointStatus />
+          <PointHistoryCard />
+        </div>
+
         <Profile />
       </div>
     </div>
