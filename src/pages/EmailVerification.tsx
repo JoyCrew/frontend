@@ -21,7 +21,7 @@ const EmailVerification: React.FC = () => {
     if (isValid) {
       try {
         const response = await apiClient.post(
-          `/api/auth/send-reset-password-email`,
+          `/api/auth/password-reset/request`,
           { email: email }
         );
         console.log("이메일 전송 성공", response.data);

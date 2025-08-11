@@ -14,8 +14,6 @@ import Manager from "./pages/Manager";
 import ManagerPoint from "./pages/ManagerPoint";
 
 function App() {
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-  console.log("api 링크", API_BASE_URL);
   return (
     <>
       <RecoilRoot>

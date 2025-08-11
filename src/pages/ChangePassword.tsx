@@ -18,7 +18,7 @@ const ChangePassword: React.FC = () => {
 
   const onClickChangePassword = async () => {
     if (!token) {
-      alert("토큰이 존재하지 않습니다.");
+      alert("이메일 인증을 실패하였습니다");
       nav("/email_verification");
       return;
     }
@@ -27,10 +27,13 @@ const ChangePassword: React.FC = () => {
       return;
     }
     try {
-      const response = await apiClient.post(`/api/auth/reset-password`, {
-        newPassword: password,
-        token: token,
-      });
+      const response = await apiClient.post(
+        `/api/auth/password-reset/confirm`,
+        {
+          token: token,
+          newPassword: password,
+        }
+      );
       console.log("비밀번호 변경 성공", response.data);
       nav("/");
     } catch (error) {
