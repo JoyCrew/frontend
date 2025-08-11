@@ -2,7 +2,9 @@ import "../common/Header.css";
 import logo from "../../assets/logo.svg";
 import person from "../../assets/person.svg";
 import alarm from "../../assets/alarm.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import { authState } from "../../states/authState";
 
 interface HeaderProps {
   name: string;
@@ -10,7 +12,9 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ name, point }) => {
+  const nav = useNavigate();
   const location = useLocation();
+  const { role } = useRecoilValue(authState);
 
   const navItems = [
     { name: "홈", path: "/home" },
@@ -22,7 +26,20 @@ const Header: React.FC<HeaderProps> = ({ name, point }) => {
   return (
     <div className="header-container">
       <header className="Header">
-        <img className="logo" src={logo} alt="logo" />
+        <div className="left-section">
+          <img className="logo" src={logo} alt="logo" />
+          {role !== "EMPLOYEE" && (
+            <p
+              className="manager"
+              onClick={() => {
+                nav("/manager");
+              }}
+            >
+              관리자
+            </p>
+          )}
+        </div>
+
         <div className="navbar">
           {navItems.map((item, index) => (
             <Link

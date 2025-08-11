@@ -17,8 +17,8 @@ const MyPage = () => {
           <PointStatus />
           <PointHistoryCard />
         </div>
-
         <Profile />
+        <div className="bottom-container"></div>
       </div>
     </div>
   );
