@@ -7,19 +7,23 @@ const localStorageEffect =
   ({ setSelf, onSet }) => {
     const savedValue = localStorage.getItem(key);
     if (savedValue != null) {
-      try {
-        setSelf(JSON.parse(savedValue));
-      } catch (e) {
-        console.error(`Failed to parse stored value for key "${key}"`, e);
-        localStorage.removeItem(key);
-      }
+      setSelf(JSON.parse(savedValue));
     }
 
     onSet((newValue, _, isReset) => {
       if (isReset) {
         localStorage.removeItem(key);
       } else {
-        localStorage.setItem(key, JSON.stringify(newValue));
+        if (Array.isArray(newValue)) {
+          const valueToStore = newValue.map((item) => {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            const { pointsToSend, isSelected, ...rest } = item;
+            return rest;
+          });
+          localStorage.setItem(key, JSON.stringify(valueToStore));
+        } else {
+          localStorage.setItem(key, JSON.stringify(newValue));
+        }
       }
     });
   };

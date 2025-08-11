@@ -8,6 +8,7 @@ interface WorkerListItemProps {
   onToggle: () => void;
   showDetails?: string;
   className?: string;
+  onPointsChange?: (employeeId: number, value: number) => void;
 }
 
 const hasDetails = (emp: Employee | AllEmployee): emp is AllEmployee => {
@@ -19,7 +20,14 @@ const WorkerListItem: React.FC<WorkerListItemProps> = ({
   onToggle,
   showDetails,
   className,
+  onPointsChange,
 }) => {
+  const handlePointsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (onPointsChange) {
+      onPointsChange(employee.employeeId, Number(e.target.value));
+    }
+  };
+
   return (
     <div className={className}>
       <div className="WorkerListItem">
@@ -54,7 +62,9 @@ const WorkerListItem: React.FC<WorkerListItemProps> = ({
               <input
                 type="number"
                 className="point"
-                value={employee.pointsToSend || ""}
+                value={employee.pointsToSend ?? 0}
+                onChange={handlePointsChange}
+                onClick={(e) => e.stopPropagation()}
               />
             </>
           )}
