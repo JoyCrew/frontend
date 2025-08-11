@@ -2,19 +2,22 @@ import "../../styles/EmployeeList.css";
 import information from "../../assets/information.svg";
 import employeePerson from "../../assets/employeePerson.svg";
 import Button from "../common/Button";
+import ManagerPopup from "./ManagerPopup";
 import Searching2 from "../../assets/searching2.svg";
 import apiClient from "../../api/axiosClient";
 import { useState, useCallback, useEffect, useRef } from "react";
 import { allEmployeeState } from "../../states/allEmployeeState";
 import { searchManagerState } from "../../states/searchManagerState";
 import type { AllEmployee } from "../../states/allEmployeeState";
-import { useSetRecoilState } from "recoil";
+import { useSetRecoilState, useRecoilState } from "recoil";
 
 const EmployeeUpload: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const setAllEmployee = useSetRecoilState(allEmployeeState);
-  const setSearchManager = useSetRecoilState(searchManagerState);
+  const [searchManager, setSearchManager] = useRecoilState(searchManagerState);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const selectedEmployee = searchManager.find((emp) => emp.isSelected);
 
   const fetchEmployeesRecursive = useCallback(
     async (page: number, keyword: string) => {
@@ -134,6 +137,34 @@ const EmployeeUpload: React.FC = () => {
     }
   };
 
+  //직원 삭제
+  const handleDeleteClick = () => {
+    if (!selectedEmployee) {
+      alert("삭제할 직원을 선택해주세요.");
+      return;
+    }
+    setIsPopupOpen(true);
+  };
+
+  const handleDeleteConfirm = async () => {
+    try {
+      const response = await apiClient.delete(
+        `/api/admin/employees/${selectedEmployee?.employeeId}` // 👈 선택된 직원의 ID를 URL에 포함
+      );
+      console.log("직원 삭제 성공:", response.data);
+      setIsPopupOpen(false);
+      fetchEmployeesRecursive(0, "");
+    } catch (error) {
+      console.error("직원 삭제 실패:", error);
+      alert("직원 삭제에 실패했습니다.");
+      setIsPopupOpen(false);
+    }
+  };
+
+  const handleDeleteCancel = () => {
+    setIsPopupOpen(false);
+  };
+
   const onClickbutton = () => {
     console.log("버튼 클릭");
   };
@@ -171,8 +202,22 @@ const EmployeeUpload: React.FC = () => {
           onClick={handleFileUploadClick}
         />
         <Button text="직원 등록" className="small" onClick={onClickbutton} />
-        <Button text="직원 삭제" className="small" onClick={onClickbutton} />
+        <Button
+          text="직원 삭제"
+          className="small"
+          onClick={handleDeleteClick}
+        />
       </div>
+
+      {isPopupOpen && (
+        <ManagerPopup
+          title="직원 삭제"
+          content={`${selectedEmployee?.employeeName}님을 직원 목록에서 삭제하시겠습니까?`}
+          button="삭제하기"
+          onConfirm={handleDeleteConfirm}
+          onCancel={handleDeleteCancel}
+        />
+      )}
     </div>
   );
 };

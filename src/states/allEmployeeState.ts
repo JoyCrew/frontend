@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+import localStorageEffect from "./effects/localStorageEffect.ts";
 
 export interface AllEmployee {
   employeeId: number;
@@ -18,4 +19,5 @@ export interface AllEmployee {
 export const allEmployeeState = atom<AllEmployee[]>({
   key: "allEmployeeState",
   default: [],
+  effects_UNSTABLE: [localStorageEffect("allEmployeeState")],
 });

@@ -11,7 +11,7 @@ const EmployeeList: React.FC = () => {
 
   return (
     <div className="EmployeeList">
-      <h1>직원 등록</h1>
+      <h1>직원 목록</h1>
       <EmployeeUpload />
       <div className="WorkerList">
         <div className="title">

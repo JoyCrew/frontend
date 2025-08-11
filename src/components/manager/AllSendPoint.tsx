@@ -1,5 +1,5 @@
 import "../../styles/AllSendPoint.css";
-import useEmployeeSelection from "../../hooks/useEmployeeSelection";
+import useMultipleSelection from "../../hooks/useMultipleSelection";
 import type { AllEmployee } from "../../states/allEmployeeState";
 import { allEmployeeState } from "../../states/allEmployeeState";
 import PointMenu from "./PointMenu";
@@ -7,7 +7,7 @@ import WorkerListItem from "../givepoint/WorkerListItem";
 
 const AllSendPoint: React.FC = () => {
   const { list: allEmployee, handleToggle } =
-    useEmployeeSelection(allEmployeeState);
+    useMultipleSelection(allEmployeeState);
   return (
     <div className="AllSendPoint">
       <h1>포인트 전송하기</h1>
