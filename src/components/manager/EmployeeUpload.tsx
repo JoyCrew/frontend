@@ -4,7 +4,7 @@ import employeePerson from "../../assets/employeePerson.svg";
 import Button from "../common/Button";
 import Searching2 from "../../assets/searching2.svg";
 import apiClient from "../../api/axiosClient";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { allEmployeeState } from "../../states/allEmployeeState";
 import { searchManagerState } from "../../states/searchManagerState";
 import type { AllEmployee } from "../../states/allEmployeeState";
@@ -14,6 +14,7 @@ const EmployeeUpload: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const setAllEmployee = useSetRecoilState(allEmployeeState);
   const setSearchManager = useSetRecoilState(searchManagerState);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const fetchEmployeesRecursive = useCallback(
     async (page: number, keyword: string) => {
@@ -101,6 +102,38 @@ const EmployeeUpload: React.FC = () => {
     }
   };
 
+  //파일 업로드
+  const handleFileUploadClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const response = await apiClient.post(
+          "/api/admin/employees/bulk",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        console.log("파일 업로드 성공:", response.data);
+        fetchEmployeesRecursive(0, "");
+      } catch (error) {
+        console.error("실패:", error);
+        alert("파일 업로드에 실패했습니다.");
+      }
+    }
+  };
+
   const onClickbutton = () => {
     console.log("버튼 클릭");
   };
@@ -126,7 +159,17 @@ const EmployeeUpload: React.FC = () => {
           csv 파일을 업로드하세요
         </div>
 
-        <Button text="파일 업로드" className="small" onClick={onClickbutton} />
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={handleFileChange}
+          style={{ display: "none" }}
+        />
+        <Button
+          text="파일 업로드"
+          className="small"
+          onClick={handleFileUploadClick}
+        />
         <Button text="직원 등록" className="small" onClick={onClickbutton} />
         <Button text="직원 삭제" className="small" onClick={onClickbutton} />
       </div>
