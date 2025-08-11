@@ -47,7 +47,7 @@ apiClient.interceptors.response.use(
     if (error.response?.status === 401) {
       console.error("인증 토큰 만료. 로그아웃 진행");
       localStorage.removeItem("auth_state");
-      window.location.href = "/login";
+      window.location.href = "/";
     }
     return Promise.reject(error);
   }

@@ -32,9 +32,13 @@
 
   background: #ffffff;
   /* Main01 */
-  border: 0.0625rem solid #6b63e1;
+  border: 0.0625rem solid #c1c4c9;
   border-radius: 0.5625rem;
   outline: none;
+}
+
+.input-field-input:focus {
+  border-color: #6b63e1;
 }
 
 .input-field-icon {

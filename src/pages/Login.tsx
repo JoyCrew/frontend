@@ -44,7 +44,7 @@ const Login: React.FC = () => {
         profileImageUrl: profileImageUrl,
         isLoggedIn: true,
       });
-      nav("/");
+      nav("/home");
     } catch (error) {
       console.error("로그인 실패:", error);
     }
