@@ -16,6 +16,9 @@
   gap: 0.8125rem;
   padding-left: 5.25rem;
   align-items: center;
+
+  font-size: 0.9375rem;
+  font-weight: 600;
 }
 
 .Sidebar img {
@@ -23,9 +26,9 @@
   height: 0.875rem;
 }
 
-.Sidebar_employee .employee-div,
-.Sidebar_point .point-div {
+.Sidebar .sidebar-item-div.active {
   background: #f4f6ff;
 
   border-right: 0.25rem solid #6b63e1;
+  color: #6b63e1;
 }
