@@ -1,0 +1,27 @@
+.GiveAndTake {
+  width: 59.5rem;
+  height: 39.625rem;
+}
+
+.GiveAndTake .index-container {
+  width: 100%;
+  height: 2.5rem;
+  border-bottom: #c1c4c9 0.0625rem solid;
+  padding-bottom: 1rem;
+
+  display: flex;
+  gap: 2.1875rem;
+}
+
+.GiveAndTake .index-container h3 {
+  height: 1.5rem;
+
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #9ca2ae;
+}
+
+.GiveAndTake .index-container .active {
+  color: #21212f;
+}

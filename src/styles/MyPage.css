@@ -8,3 +8,14 @@
   justify-content: space-between;
   gap: 1.5rem;
 }
+
+.MyPage .bottom-container {
+  position: absolute;
+  width: 78.8125rem;
+  height: 39.625rem;
+  top: 25.0625rem;
+  left: 5.25rem;
+
+  display: flex;
+  gap: 64px;
+}

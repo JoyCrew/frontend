@@ -1,0 +1,27 @@
+.TagHistory {
+  width: 15.3125rem;
+  height: 26.25rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.TagHistory h3 {
+  height: 1.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+
+  color: #21212f;
+}
+
+.TagHistory .tag-container {
+  width: 15.3125rem;
+  height: 23.75rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+  padding: 2.25rem 2.75rem;
+}

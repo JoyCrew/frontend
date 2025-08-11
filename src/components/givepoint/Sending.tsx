@@ -9,7 +9,7 @@ import type { ChangeEvent } from "react";
 import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { TagState } from "../../states/tagState";
+import { tagState } from "../../states/tagState";
 
 const MIN_POINT = 0;
 const MAX_POINT = 999999;
@@ -23,15 +23,15 @@ const Sending: React.FC<SendingProps> = ({ employee }) => {
   const [buttonClassName, setButtonClassName] = useState<string>("smallGray");
   const [point, setPoint] = useState<number | null>(0);
 
-  const tagState = useRecoilValue(TagState);
+  const selectedTags = useRecoilValue(tagState);
   useEffect(() => {
-    const isTagSelected = tagState.some((tag) => tag.isSelected);
+    const isTagSelected = selectedTags.some((tag) => tag.isSelected);
     if (isTagSelected) {
       setButtonClassName("small");
     } else {
       setButtonClassName("smallGray");
     }
-  }, [tagState]);
+  }, [selectedTags]);
 
   const handleIncrease = () => {
     const currentPoint = point ?? 0;
