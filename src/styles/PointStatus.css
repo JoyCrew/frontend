@@ -1,14 +1,11 @@
 .PointStatus {
-  position: absolute;
+  position: relative;
   width: 10.3125rem;
   height: 18.4375rem;
-  top: 2.625rem;
-  left: 5.25rem;
 }
 
 .PointStatus .title {
   position: absolute;
-  width: 5.75rem;
   height: 1.5rem;
   left: 0.5rem;
   top: 0rem;

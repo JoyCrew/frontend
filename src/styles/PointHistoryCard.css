@@ -1,0 +1,31 @@
+.PointHistoryCard {
+  width: 45rem;
+  height: 18.4375rem;
+}
+
+.PointHistoryCard .title {
+  height: 1.5rem;
+
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+
+  color: #21212f;
+}
+
+.PointHistoryCard .card-list-container {
+  position: absolute;
+  width: 45rem;
+  height: 15.9375rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+  padding: 1.5rem 2.25rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}

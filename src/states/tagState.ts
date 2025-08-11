@@ -1,11 +1,11 @@
 import { atom } from "recoil";
 
-interface TagState {
+export interface TagState {
   name: string;
   isSelected: boolean;
 }
 
-export const TagState = atom<TagState[]>({
+export const tagState = atom<TagState[]>({
   key: "tagState",
   default: [
     {

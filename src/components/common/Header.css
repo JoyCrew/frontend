@@ -18,6 +18,31 @@
   justify-content: space-between;
 }
 
+.Header .left-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 19.5rem;
+}
+
+.Header .left-section .manager {
+  width: 5.625rem;
+  height: 2.125rem;
+
+  /* Main02 */
+  background: #c7c3ff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 2.125rem;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
 .Header .logo {
   width: 9.0175rem;
   height: 1.9919rem;
@@ -28,7 +53,6 @@
   flex-direction: row;
   align-items: center;
   gap: 3.875rem;
-  margin-left: 7rem;
 }
 
 .Header .navbar .nav-item {

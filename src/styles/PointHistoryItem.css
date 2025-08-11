@@ -1,0 +1,44 @@
+.PointHistoryItem {
+  width: 40rem;
+  height: 4rem;
+
+  display: flex;
+  gap: 3rem;
+
+  padding-bottom: 1rem;
+  border-bottom: #f3f4f6 solid 1px;
+}
+
+.PointHistoryItem .date {
+  width: 4rem;
+  height: 1.1875rem;
+
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+
+  color: #626273;
+}
+
+.PointHistoryItem .content {
+  width: 27rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.PointHistoryItem .content .additional {
+  display: flex;
+  gap: 0.875rem;
+}
+
+.PointHistoryItem .content .additional p {
+  height: 1.1875rem;
+
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+
+  color: #626273;
+}
