@@ -2,7 +2,7 @@ import "../../styles/SearchWorker.css";
 import searching from "../../assets/searching.svg";
 import enter from "../../assets/enter.svg";
 import employeePerson from "../../assets/employeePerson.svg";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import apiClient from "../../api/axiosClient";
 import { useSetRecoilState } from "recoil";
 import { searchResultState } from "../../states/searchResultState";
@@ -12,41 +12,60 @@ const SearchWorker: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const setSearchResults = useSetRecoilState(searchResultState);
 
+  const performSearch = useCallback(
+    async (page: number) => {
+      try {
+        const response = await apiClient.get(`/api/employee/query`, {
+          params: {
+            keyword: searchTerm,
+            page: page,
+            size: 20,
+          },
+        });
+
+        const resultsWithSelection: Employee[] = response.data.employees.map(
+          (
+            employee: Omit<Employee, "isSelected" | "profileImageUrl"> & {
+              profileImageUrl?: string;
+            }
+          ) => ({
+            ...employee,
+            isSelected: false,
+            profileImageUrl: employee.profileImageUrl || employeePerson,
+          })
+        );
+        setSearchResults((prevEmployees) => {
+          return page === 0
+            ? resultsWithSelection
+            : [...prevEmployees, ...resultsWithSelection];
+        });
+
+        if (!response.data.last) {
+          performSearch(page + 1);
+        }
+      } catch (error) {
+        console.log(error);
+        setSearchResults([]);
+      }
+    },
+    [searchTerm, setSearchResults]
+  );
+
+  useEffect(() => {
+    performSearch(0);
+  }, [performSearch]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
-  const performSearch = async () => {
-    try {
-      const response = await apiClient.get(`/api/employee/query`, {
-        params: {
-          keyword: searchTerm,
-          page: 0, //currentpage, totalpage에 따라 수정필요
-          size: 20,
-        },
-      });
-      console.log("검색 성공", response.data);
-      const resultsWithSelection: Employee[] = response.data.employees.map(
-        (
-          employee: Omit<Employee, "isSelected" | "profileIamgeUrl"> & {
-            profileImageUrl?: string;
-          }
-        ) => ({
-          ...employee,
-          isSelected: false,
-          profileImageUrl: employee.profileImageUrl || employeePerson,
-        })
-      );
-      setSearchResults(resultsWithSelection);
-    } catch (error) {
-      console.log(error);
-      setSearchResults([]);
-    }
+  const handleSearchClick = () => {
+    performSearch(0);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      performSearch();
+      handleSearchClick();
     }
   };
 
@@ -68,7 +87,7 @@ const SearchWorker: React.FC = () => {
           src={enter}
           className="enter"
           alt="enter"
-          onClick={performSearch}
+          onClick={handleSearchClick}
         />
       </div>
     </div>

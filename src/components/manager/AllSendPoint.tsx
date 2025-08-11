@@ -1,7 +1,7 @@
 import "../../styles/AllSendPoint.css";
 import useEmployeeSelection from "../../hooks/useEmployeeSelection";
-import type { AllEmployee } from "../../states/AllEmployeeState";
-import { allEmployeeState } from "../../states/AllEmployeeState";
+import type { AllEmployee } from "../../states/allEmployeeState";
+import { allEmployeeState } from "../../states/allEmployeeState";
 import PointMenu from "./PointMenu";
 import WorkerListItem from "../givepoint/WorkerListItem";
 

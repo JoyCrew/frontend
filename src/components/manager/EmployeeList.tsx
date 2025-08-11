@@ -1,13 +1,13 @@
 import "../../styles/EmployeeList.css";
 import type { AllEmployee } from "../../states/allEmployeeState";
-import { allEmployeeState } from "../../states/allEmployeeState";
+import { searchManagerState } from "../../states/searchManagerState";
 import useEmployeeSelection from "../../hooks/useEmployeeSelection";
 import EmployeeUpload from "./EmployeeUpload";
 import WorkerListItem from "../givepoint/WorkerListItem";
 
 const EmployeeList: React.FC = () => {
   const { list: allEmployee, handleToggle } =
-    useEmployeeSelection(allEmployeeState);
+    useEmployeeSelection(searchManagerState);
 
   return (
     <div className="EmployeeList">

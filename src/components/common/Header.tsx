@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ name, point }) => {
       <header className="Header">
         <div className="left-section">
           <img className="logo" src={logo} alt="logo" />
-          {role !== "EMPLOYEE" && (
+          {role === "SUPER_ADMIN" && (
             <p
               className="manager"
               onClick={() => {
