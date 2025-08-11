@@ -1,0 +1,51 @@
+.GoodsList {
+  width: 57rem;
+  height: 100%;
+  margin-left: 5.8125rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.GoodsList .item-container {
+  width: 100%;
+  height: 1100px;
+
+  gap: 5.125rem 4rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.GoodsListItem {
+  width: 11.25rem;
+  height: 15.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.625rem;
+}
+
+.GoodsListItem img {
+  width: 100%;
+  height: 11.25rem;
+}
+
+.GoodsListItem p {
+  height: 1.125rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}
+
+.GoodsListItem h3 {
+  height: 1.125rem;
+
+  font-weight: 700;
+  font-size: 1.3125rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}
