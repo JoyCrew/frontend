@@ -1,0 +1,150 @@
+.popup-overlay {
+  position: fixed; /* 화면에 고정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  padding-top: 10%;
+  z-index: 1000;
+}
+
+.ChangePopup {
+  box-sizing: border-box;
+
+  width: 59.6875rem;
+  height: 33.125rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #e5e5ea;
+  box-shadow: 0.125rem 0.125rem 0.5rem rgba(217, 217, 217, 0.2);
+  border-radius: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.ChangePopup .close-icon {
+  margin-top: 2.25rem;
+  margin-left: 56.125rem;
+  width: 1.3125rem;
+  height: 1.3125rem;
+}
+
+.ChangePopup .item-container {
+  display: flex;
+  width: 49.875rem;
+  height: 24.75rem;
+  margin-top: 2.0625rem;
+  margin-left: 4.9375rem;
+}
+
+.ChangePopup .GoodsListItem {
+  width: 15.625rem;
+  height: 21.375rem;
+
+  gap: 1.75rem;
+  text-align: left;
+}
+
+.ChangePopup .GoodsListItem img {
+  width: 100%;
+  height: 15.625rem;
+
+  border-radius: 1.25rem;
+}
+
+.ChangePopup .GoodsListItem p {
+  font-size: 1.75rem;
+}
+
+.ChangePopup .GoodsListItem h3 {
+  font-size: 2rem;
+}
+
+.ChangePopup .right-container {
+  width: 31.3125rem;
+  height: 12.5625rem;
+  margin-left: 2.9375rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ChangePopup .address-container {
+  width: 100%;
+  height: 7.25rem;
+
+  background: #e5e5ea;
+  border: 1px solid #c1c4c9;
+  border-radius: 16px;
+
+  padding: 1.3rem 1.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ChangePopup .address-container h3,
+.ChangePopup .quantity-container h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+
+  color: #000000;
+}
+
+.ChangePopup .address-container p {
+  width: 27.8125rem;
+
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: #464656;
+}
+
+.ChangePopup .quantity-container {
+  width: 31.3125rem;
+  height: 4.3125rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #c1c4c9;
+  border-radius: 1rem;
+  padding: 1.3rem 1.625rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ChangePopup .input-container {
+  width: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ChangePopup .input-container input {
+  width: 2rem;
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+  text-align: center;
+
+  color: #000000;
+}
+
+.ChangePopup .quantity-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.ChangePopup .Button {
+  margin-top: 20.5625rem;
+  margin-left: 36.0625rem;
+}

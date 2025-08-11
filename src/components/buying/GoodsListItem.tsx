@@ -4,12 +4,13 @@ import goodsImage from "../../assets/goodsImage.svg";
 
 interface GoodsListItemProps {
   goods: GoodsState;
+  onClick?: () => void;
 }
 
-const GoodsListItem: React.FC<GoodsListItemProps> = ({ goods }) => {
+const GoodsListItem: React.FC<GoodsListItemProps> = ({ goods, onClick }) => {
   console.log(goods);
   return (
-    <div className="GoodsListItem">
+    <div className="GoodsListItem" onClick={onClick}>
       <img src={goods.image ? goods.image : goodsImage} alt="goods" />
       <p>{goods.name}</p>
       <h3>{goods.point} 포인트</h3>

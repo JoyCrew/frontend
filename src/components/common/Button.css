@@ -43,3 +43,15 @@
   color: #ffffff;
   box-shadow: none;
 }
+
+.Button_popup {
+  width: 13.8125rem;
+  height: 4.25rem;
+  border-radius: 1rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+
+  color: #ffffff;
+}
