@@ -10,6 +10,9 @@ interface ProfileState {
   level: string | null;
   department: string | null;
   position: string | null;
+  birthday: string | null;
+  address: string | null;
+  hireDate: string | null;
 }
 
 export const profileState = atom<ProfileState>({
@@ -24,5 +27,8 @@ export const profileState = atom<ProfileState>({
     level: null,
     department: null,
     position: null,
+    birthday: null,
+    address: null,
+    hireDate: null,
   },
 });

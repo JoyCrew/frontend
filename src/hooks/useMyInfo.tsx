@@ -20,6 +20,9 @@ const useMyInfo = () => {
           level,
           department,
           position,
+          birthday,
+          address,
+          hireDate,
         } = response.data;
         setProfile({
           employeeId: employeeId,
@@ -31,6 +34,9 @@ const useMyInfo = () => {
           level: level,
           department: department,
           position: position,
+          birthday: birthday,
+          address: address,
+          hireDate: hireDate,
         });
       } catch (error) {
         console.error("프로필 불러오기 실패", error);

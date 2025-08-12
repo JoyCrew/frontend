@@ -1,15 +1,13 @@
 import Header from "../components/common/Header";
-import useHeaderData from "../hooks/useHeaderData";
 import GoodsList from "../components/buying/GoodsList";
 import Sidebar from "../components/common/Sidebar";
 import { userBuyingMenuItems } from "../data/SidebarMenu";
 
 const BuyingGoods: React.FC = () => {
-  const { name, point } = useHeaderData();
 
   return (
     <div className="BuyingGoods">
-      <Header name={name} point={point} />
+      <Header />
       <div className="main">
         <Sidebar activePath="/buying_goods" menuItems={userBuyingMenuItems} />
         <GoodsList />
