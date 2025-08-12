@@ -86,7 +86,7 @@ const PointMenu: React.FC = () => {
       const requestBody = {
         distributions: distributions,
         message: message,
-        // type: "AWARD_MANAGER_SPOT",
+        type: "AWARD_MANAGER_SPOT",
       };
 
       const response = await apiClient.post(
