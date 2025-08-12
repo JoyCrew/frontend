@@ -13,6 +13,8 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #f8fbff;
+  display: flex;
+  justify-content: center; 
 }
 
 @font-face {
@@ -35,13 +37,12 @@ body * {
 }
 
 .main {
-  position: absolute;
+  position: relative;
   width: 90rem;
   height: 100%;
   display: flex;
-  left: 0;
-  right: 0;
   margin: 0 auto;
+
 }
 
 html {
