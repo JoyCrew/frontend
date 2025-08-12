@@ -7,8 +7,6 @@ const useHeaderData = () => {
   const displayName = isLoggedIn && name ? name : "게스트";
   const displayPoint = isLoggedIn && totalPoint ? totalPoint : 0;
 
-  console.log("totalPoint", totalPoint);
-
   return {
     name: displayName,
     point: displayPoint,

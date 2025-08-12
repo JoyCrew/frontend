@@ -1,15 +1,19 @@
 import "../../styles/Message.css";
 import message from "../../assets/message.svg";
-import { useState } from "react";
+
 import type { ChangeEvent } from "react";
 
 const MAX_LENGTH = 300;
 
-const Message: React.FC = () => {
-  const [messageContent, setMessageContent] = useState<string>("");
-  const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setMessageContent(e.target.value);
-  };
+interface MessageProps {
+  messageContent: string;
+  handleInputChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+}
+
+const Message: React.FC<MessageProps> = ({
+  messageContent,
+  handleInputChange,
+}) => {
   return (
     <div className="Message">
       <div className="givePoint-title">
