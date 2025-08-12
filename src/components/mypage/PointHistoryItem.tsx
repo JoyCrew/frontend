@@ -27,7 +27,7 @@ const PointHistoryItem: React.FC<PointHistoryItemProps> = ({ entry }) => {
           <p>{entry.message}</p>
         </div>
       </div>
-      <h3>-{entry.amount}</h3>
+      <h3>{entry.amount}</h3>
     </div>
   );
 };
