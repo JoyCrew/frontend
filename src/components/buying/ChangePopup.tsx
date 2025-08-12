@@ -11,11 +11,14 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { selectedGoodsIdState, goodsState } from "../../states/goodsState";
 import type { GoodsState } from "../../states/goodsState";
 
+import { profileState } from "../../states/propfileState";
+
 interface ChangePopupProps {
   onClose: () => void;
 }
 
 const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
+  const {address} = useRecoilValue(profileState);
   const allGoods = useRecoilValue(goodsState);
   const [selectedGoodsId, setSelectedGoodsId] =
     useRecoilState(selectedGoodsIdState);
@@ -61,8 +64,7 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
               {/* 변경 필요 */}
               <h3>배송지 정보</h3>
               <p>
-                강원도 원주시 북원로 2777, 사서함 5024호 51통신대대 상병 박정환
-                상병 박정환
+                {address}
               </p>
             </div>
             <div className="quantity-container">

@@ -4,17 +4,14 @@ import person from "../../assets/person.svg";
 import alarm from "../../assets/alarm.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { authState } from "../../states/authState";
+import { profileState } from "../../states/propfileState";
 
-interface HeaderProps {
-  name: string;
-  point: number;
-}
 
-const Header: React.FC<HeaderProps> = ({ name, point }) => {
+
+const Header: React.FC = () => {
   const nav = useNavigate();
   const location = useLocation();
-  const { role } = useRecoilValue(authState);
+  const { level, name, totalBalance, profileImageUrl } = useRecoilValue(profileState);
 
   const navItems = [
     { name: "홈", path: "/home" },
@@ -28,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ name, point }) => {
       <header className="Header">
         <div className="left-section">
           <img className="logo" src={logo} alt="logo" />
-          {role === "SUPER_ADMIN" && (
+          {level === "SUPER_ADMIN" && (
             <p
               className="manager"
               onClick={() => {
@@ -55,10 +52,10 @@ const Header: React.FC<HeaderProps> = ({ name, point }) => {
         </div>
         <div className="right-section">
           <div className="profile">
-            <img className="person" src={person} alt="person" />
+            <img className="person" src={profileImageUrl ? profileImageUrl : person} alt="person" />
             <div className="ment">
               <p className="name">{name}</p>
-              <p className="point">{point} points</p>
+              <p className="point">{totalBalance} points</p>
             </div>
           </div>
           <img className="alarm" src={alarm} alt="alarm" />

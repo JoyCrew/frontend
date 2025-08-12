@@ -1,9 +1,9 @@
 import "../styles/Home.css";
 import Header from "../components/common/Header";
-import useHeaderData from "../hooks/useHeaderData";
 import MainMent from "../components/home/MainMent";
 import MainContent from "../components/home/MainContent";
 import { useState } from "react";
+import useMyInfo from "../hooks/useMyInfo";
 
 const content = [
   {
@@ -29,12 +29,12 @@ const content = [
 ];
 
 const Home: React.FC = () => {
-  const { name, point } = useHeaderData();
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(1);
 
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(1);
+  useMyInfo();
   return (
     <div className="Home">
-      <Header name={name} point={point} />
+      <Header/>
       <div className="main">
         <MainMent />
         <div className="content-container">

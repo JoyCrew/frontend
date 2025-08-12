@@ -1,12 +1,11 @@
 import Header from "../components/common/Header";
-import useHeaderData from "../hooks/useHeaderData";
+
 import Sending from "../components/givepoint/Sending";
 import employeePerson from "../assets/employeePerson.svg";
 import { useRecoilValue } from "recoil";
 import { searchResultState } from "../states/searchResultState";
 
 const GivePoint2: React.FC = () => {
-  const { name, point } = useHeaderData();
   const allEmployess = useRecoilValue(searchResultState);
   const SelectedEmployee = allEmployess.find((emp) => emp.isSelected);
   const employeeData = SelectedEmployee || {
@@ -19,7 +18,7 @@ const GivePoint2: React.FC = () => {
   };
   return (
     <div className="GivePoint2">
-      <Header name={name} point={point} />
+      <Header />
       <div className="main">
         <Sending employee={employeeData} />
       </div>

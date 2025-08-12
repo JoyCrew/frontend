@@ -10,6 +10,7 @@ import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { tagState } from "../../states/tagState";
+import apiClient from "../../api/axiosClient";
 
 const MIN_POINT = 0;
 const MAX_POINT = 999999;
@@ -19,19 +20,27 @@ interface SendingProps {
 }
 
 const Sending: React.FC<SendingProps> = ({ employee }) => {
+  const [messageContent, setMessageContent] = useState<string>("");
   const nav = useNavigate();
   const [buttonClassName, setButtonClassName] = useState<string>("smallGray");
   const [point, setPoint] = useState<number | null>(0);
-
   const selectedTags = useRecoilValue(tagState);
+  const givingTags = selectedTags
+    .filter((tag) => tag.isSelected)
+    .map((tag) => tag.element);
+
+  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setMessageContent(e.target.value);
+  };
+
   useEffect(() => {
     const isTagSelected = selectedTags.some((tag) => tag.isSelected);
-    if (isTagSelected) {
+    if (isTagSelected && point !== 0) {
       setButtonClassName("small");
     } else {
       setButtonClassName("smallGray");
     }
-  }, [selectedTags]);
+  }, [selectedTags, point]);
 
   const handleIncrease = () => {
     const currentPoint = point ?? 0;
@@ -62,11 +71,23 @@ const Sending: React.FC<SendingProps> = ({ employee }) => {
     }
   };
 
-  const onClickButton = () => {
-    if (buttonClassName == "smallGray") {
-      console.log("클릭x");
-    } else {
-      nav("/");
+  const handleSubmit = async () => {
+    if (buttonClassName == "small") {
+      try {
+        const requestBody = {
+          receiverId: employee.employeeId,
+          points: point,
+          message: messageContent,
+          tags: givingTags,
+        };
+        const response = await apiClient.post("api/gift-points", requestBody);
+        console.log(requestBody);
+        console.log("포인트 전송 성공", response.data);
+        nav("/home");
+        window.location.reload();
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -92,8 +113,11 @@ const Sending: React.FC<SendingProps> = ({ employee }) => {
         <p>points</p>
       </div>
       <Tag />
-      <Message />
-      <Button text="다음" onClick={onClickButton} className={buttonClassName} />
+      <Message
+        messageContent={messageContent}
+        handleInputChange={handleMessageChange}
+      />
+      <Button text="다음" onClick={handleSubmit} className={buttonClassName} />
     </div>
   );
 };
