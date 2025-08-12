@@ -1,0 +1,27 @@
+<svg width="362" height="563" viewBox="0 0 362 563" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_972_5231" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="362" height="566">
+<rect x="1.5" y="1.5" width="359" height="563" rx="28.5" fill="black" stroke="white" stroke-width="3"/>
+</mask>
+<g mask="url(#mask0_972_5231)">
+<g filter="url(#filter0_f_972_5231)">
+<ellipse cx="150.689" cy="127.672" rx="150.689" ry="127.672" transform="matrix(0.979986 -0.199067 0.294885 0.955533 -135 -69.0059)" fill="#C5C1FF"/>
+<path d="M12.2312 -100.436C94.3628 -117.12 178.362 -75.6844 199.465 -7.30328C220.568 61.0777 170.545 129.737 88.4132 146.42C6.28169 163.104 -77.718 121.669 -98.8211 53.2883C-119.924 -15.0929 -69.9005 -83.7528 12.2312 -100.436Z" stroke="white" stroke-width="3"/>
+</g>
+<g filter="url(#filter1_f_972_5231)">
+<ellipse cx="214.479" cy="174.552" rx="214.479" ry="174.552" transform="matrix(0.998982 -0.045105 -0.353689 0.935363 -60.5261 -61.6519)" fill="#746CEB" fill-opacity="0.7"/>
+<path d="M154.265 -72.729C273.122 -78.0955 342.242 -9.00053 307.756 82.2016C273.269 173.404 148.587 251.249 29.7295 256.616C-89.1274 261.982 -158.248 192.887 -123.762 101.685C-89.2754 10.483 35.4076 -67.3624 154.265 -72.729Z" stroke="white" stroke-width="3"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_972_5231" x="-305.195" y="-305.586" width="711.033" height="657.157" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_972_5231"/>
+</filter>
+<filter id="filter1_f_972_5231" x="-334.236" y="-274.426" width="852.466" height="732.738" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_972_5231"/>
+</filter>
+</defs>
+</svg>
