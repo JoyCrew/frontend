@@ -1,13 +1,55 @@
 import "../../styles/AllSendPoint.css";
-import useEmployeeSelection from "../../hooks/useEmployeeSelection";
+import { useRecoilState, useRecoilValue } from "recoil";
 import type { AllEmployee } from "../../states/allEmployeeState";
 import { allEmployeeState } from "../../states/allEmployeeState";
 import PointMenu from "./PointMenu";
 import WorkerListItem from "../givepoint/WorkerListItem";
+import { totalPointsToSendSelector } from "../../states/pointState";
 
 const AllSendPoint: React.FC = () => {
-  const { list: allEmployee, handleToggle } =
-    useEmployeeSelection(allEmployeeState);
+  const [allEmployee, setAllEmployee] = useRecoilState(allEmployeeState);
+  const totalPointsToSend = useRecoilValue(totalPointsToSendSelector);
+  const selectedCount = allEmployee.filter((emp) => emp.isSelected).length;
+
+  const handleToggle = (index: number) => {
+    setAllEmployee((prevList) => {
+      const isCurrentlySelected = prevList[index].isSelected;
+      const newSelectedCount = isCurrentlySelected
+        ? selectedCount - 1
+        : selectedCount + 1;
+      const newList = prevList.map((item, i) => {
+        if (i === index) {
+          const newIsSelected = !item.isSelected;
+          const pointsPerEmployee =
+            newSelectedCount > 0 ? totalPointsToSend / newSelectedCount : 0;
+          return {
+            ...item,
+            isSelected: newIsSelected,
+            pointsToSend: newIsSelected ? pointsPerEmployee : 0,
+          };
+        }
+        return {
+          ...item,
+          pointsToSend:
+            item.isSelected && newSelectedCount > 0
+              ? totalPointsToSend / newSelectedCount
+              : 0,
+        };
+      });
+      return newList;
+    });
+  };
+
+  const handlePointChange = (employeeId: number, value: number) => {
+    setAllEmployee((prevEmployees) =>
+      prevEmployees.map((employee) =>
+        employee.employeeId === employeeId
+          ? { ...employee, pointsToSend: value }
+          : employee
+      )
+    );
+  };
+
   return (
     <div className="AllSendPoint">
       <h1>포인트 전송하기</h1>
@@ -28,6 +70,7 @@ const AllSendPoint: React.FC = () => {
                 onToggle={() => handleToggle(index)}
                 showDetails="point"
                 className="AllSendPointItem"
+                onPointsChange={handlePointChange}
               />
             ))
           ) : (

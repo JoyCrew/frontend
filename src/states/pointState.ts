@@ -31,3 +31,36 @@ export const remainingPointsSelector = selector<number>({
     return availablePoints - sendingPoints;
   },
 });
+
+//포인트 실시간 계산
+export const totalPointsToSendSelector = selector({
+  key: "totalPointsToSendSelector",
+  get: ({ get }) => {
+    const employees = get(allEmployeeState);
+    const selectedCount = employees.filter((emp) => emp.isSelected).length;
+
+    if (selectedCount > 0) {
+      return employees
+        .filter((emp) => emp.isSelected)
+        .reduce((sum, emp) => sum + (emp.pointsToSend || 0), 0);
+    } else {
+      return get(sendingPointsState);
+    }
+  },
+  set: ({ set, get }, newValue) => {
+    if (typeof newValue === "number") {
+      const selectedCount = get(selectedEmployeeCountSelector);
+
+      if (selectedCount > 0) {
+        const pointsPerEmployee = newValue / selectedCount;
+        set(allEmployeeState, (prevEmployees) =>
+          prevEmployees.map((emp) =>
+            emp.isSelected ? { ...emp, pointsToSend: pointsPerEmployee } : emp
+          )
+        );
+      }
+
+      set(sendingPointsState, newValue);
+    }
+  },
+});

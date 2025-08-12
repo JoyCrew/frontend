@@ -5,33 +5,7 @@ import { useState } from "react";
 const GoodsCategory = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const performSearch = async () => {
-    // try {
-    //   const response = await apiClient.get(`/api/employee/query`, {
-    //     params: {
-    //       keyword: searchTerm,
-    //       page: 0, //currentpage, totalpage에 따라 수정필요
-    //       size: 20,
-    //     },
-    //   });
-    //   console.log("검색 성공", response.data);
-    //   const resultsWithSelection: Employee[] = response.data.employees.map(
-    //     (
-    //       employee: Omit<Employee, "isSelected" | "profileIamgeUrl"> & {
-    //         profileImageUrl?: string;
-    //       }
-    //     ) => ({
-    //       ...employee,
-    //       isSelected: false,
-    //       profileImageUrl: employee.profileImageUrl || employeePerson,
-    //     })
-    //   );
-    //   setSearchResults(resultsWithSelection);
-    // } catch (error) {
-    //   console.log(error);
-    //   setSearchResults([]);
-    // }
-  };
+  const performSearch = async () => {};
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
