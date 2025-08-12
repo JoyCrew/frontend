@@ -1,0 +1,27 @@
+<svg width="362" height="566" viewBox="0 0 362 566" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_972_5301" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="362" height="566">
+<rect x="1.5" y="1.5" width="359" height="563" rx="28.5" fill="black" stroke="white" stroke-width="3"/>
+</mask>
+<g mask="url(#mask0_972_5301)">
+<g filter="url(#filter0_f_972_5301)">
+<ellipse cx="150.689" cy="127.672" rx="150.689" ry="127.672" transform="matrix(0.979986 -0.199067 0.294885 0.955533 -171.391 -126.621)" fill="#D3D0FF"/>
+<path d="M-24.1594 -158.052C57.9722 -174.735 141.971 -133.3 163.074 -64.9185C184.177 3.46247 134.154 72.1215 52.0226 88.8051C-30.1089 105.489 -114.109 64.054 -135.212 -4.3269C-156.315 -72.7081 -106.291 -141.368 -24.1594 -158.052Z" stroke="white" stroke-width="3"/>
+</g>
+<g filter="url(#filter1_f_972_5301)">
+<ellipse cx="202.924" cy="180.104" rx="202.924" ry="180.104" transform="matrix(0.938506 0.345263 -0.688306 0.72542 249.043 113.574)" fill="#D7D4FF"/>
+<path d="M440.521 182.548C546.315 221.469 576.521 311.991 507.374 384.867C438.227 457.742 296.318 484.946 190.523 446.026C84.7283 407.106 54.5216 316.583 123.669 243.707C192.816 170.831 334.726 143.628 440.521 182.548Z" stroke="white" stroke-width="3"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_972_5301" x="-341.585" y="-363.201" width="711.033" height="657.157" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_972_5301"/>
+</filter>
+<filter id="filter1_f_972_5301" x="-115.246" y="-36.3947" width="861.535" height="701.364" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_972_5301"/>
+</filter>
+</defs>
+</svg>

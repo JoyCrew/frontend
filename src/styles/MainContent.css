@@ -1,0 +1,191 @@
+.MainContent {
+  position: relative;
+}
+
+.MainContent .initial {
+  width: 6.125rem;
+  height: 37.5rem;
+
+  padding-top: 3.3125rem;
+  text-align: center;
+
+  border-radius: 2.625rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.MainContent .initial.is-hovered {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.MainContent .initial h1 {
+  width: 100%;
+  height: 2.375rem;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  text-align: center;
+
+  color: #6b63e1;
+}
+
+.MainContent .initial_1 {
+  background: linear-gradient(to bottom, #fefdff, #f7f0ff);
+  border: 0.0625rem solid #ffffff;
+}
+
+.MainContent .initial_2 {
+  background: linear-gradient(to bottom, #ddd6f9, #c5acf6);
+}
+
+.MainContent .initial_3 {
+  background: linear-gradient(to bottom, #c7c0f4, #b29bf1);
+}
+
+.MainContent .initial_4 {
+  background: linear-gradient(to bottom, #a49ded, #9785eb);
+}
+
+.MainContent .hovering {
+  position: absolute;
+  top: 0;
+  width: 25rem;
+  height: 37.5rem;
+
+  background: #ffffff;
+  opacity: 0.7;
+  border-radius: 2.9375rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.MainContent .hovering_1 {
+  background-color: #fefdff;
+}
+
+.MainContent .hovering_2 {
+  background-color: #ddd6f9;
+}
+
+.MainContent .hovering_3 {
+  background-color: #c7c0f4;
+}
+
+.MainContent .hovering_4 {
+  background-color: #a49ded;
+}
+
+.MainContent .hovering.is-hovered {
+  opacity: 1;
+  visibility: visible;
+}
+
+.MainContent .hovering .frame-image {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.375rem;
+  width: 22.25rem;
+  height: 35rem;
+}
+
+.MainContent .hovering .frame-div {
+  position: absolute;
+  top: 0;
+}
+
+.MainContent .hovering h1 {
+  position: absolute;
+  width: 5rem;
+  height: 2.6875rem;
+  left: 2.8125rem;
+  top: 3.3125rem;
+
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+
+  color: #6b63e1;
+}
+
+.MainContent .hovering h2 {
+  position: absolute;
+  top: 25.25rem;
+  left: 2.8125rem;
+
+  height: 2.375rem;
+  width: 20rem;
+
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.375rem;
+
+  color: #464656;
+
+  opacity: 0.9;
+}
+
+.MainContent .hovering .button-container {
+  position: absolute;
+  top: 29.3125rem;
+  left: 2.8125rem;
+  width: 11.9375rem;
+  height: 3.875rem;
+
+  background: #dbd9ff;
+  border-radius: 1.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.MainContent .hovering .button-container .arrow-icon {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 100%;
+
+  align-items: center;
+  padding: 0.625rem;
+  margin-left: 0.5rem;
+
+  background: #ffffff;
+  color: #6b63e1;
+}
+
+.MainContent .hovering .button-container p {
+  height: 1.1875rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+
+  color: #464656;
+}
+
+/* 이미지 css */
+.MainContent .hovering .image_1 {
+  position: relative;
+  margin-top: 3rem;
+  margin-left: 5.3rem;
+  width: 22.0113rem;
+  height: 22.4256rem;
+}
+
+.MainContent .hovering_3 h2,
+.MainContent .hovering_3 .button-container,
+.MainContent .hovering_4 h2,
+.MainContent .hovering_4 .button-container {
+  left: 10.8125rem;
+}
+
+.MainContent .hovering .image_3 {
+  position: relative;
+  margin-top: 0;
+  margin-left: -8rem;
+  width: 36rem;
+  height: 36rem;
+}

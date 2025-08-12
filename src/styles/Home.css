@@ -1,0 +1,21 @@
+.Home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../assets/mainBackground.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.Home .content-container {
+  width: 47.125rem;
+  height: 37.5rem;
+  display: flex;
+  margin-top: 10rem;
+  gap: 1.25rem;
+}

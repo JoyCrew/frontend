@@ -1,0 +1,27 @@
+<svg width="362" height="566" viewBox="0 0 362 566" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_972_5099" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="362" height="566">
+<rect x="1.5" y="1.5" width="359" height="563" rx="28.5" fill="black" stroke="white" stroke-width="3"/>
+</mask>
+<g mask="url(#mask0_972_5099)">
+<g filter="url(#filter0_f_972_5099)">
+<ellipse cx="150.689" cy="127.672" rx="150.689" ry="127.672" transform="matrix(0.979986 -0.199067 0.294885 0.955533 -173.39 -124.622)" fill="#DBD9FF"/>
+<path d="M-26.1585 -156.052C55.9731 -172.736 139.972 -131.3 161.075 -62.9191C182.178 5.46192 132.155 74.1209 50.0236 90.8046C-32.108 107.488 -116.108 66.0535 -137.211 -2.32745C-158.314 -70.7086 -108.29 -139.369 -26.1585 -156.052Z" stroke="white" stroke-width="3"/>
+</g>
+<g filter="url(#filter1_f_972_5099)">
+<ellipse cx="196.242" cy="165.466" rx="196.242" ry="165.466" transform="matrix(0.938506 0.345263 -0.688306 0.72542 259.044 93.5733)" fill="#C7C3FF"/>
+<path d="M444.251 160.24C546.511 197.86 578.539 282.574 514.91 349.634C451.281 416.693 316.664 440.101 214.404 402.481C112.145 364.861 80.1171 280.147 143.746 213.088C207.374 146.028 341.992 122.621 444.251 160.24Z" stroke="white" stroke-width="3"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_972_5099" x="-343.584" y="-361.202" width="711.033" height="657.157" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_972_5099"/>
+</filter>
+<filter id="filter1_f_972_5099" x="-90.756" y="-58.8974" width="840.167" height="680.516" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_972_5099"/>
+</filter>
+</defs>
+</svg>
