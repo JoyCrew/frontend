@@ -1,0 +1,228 @@
+.BuyingHistory .history-container {
+  position: relative;
+  width: 57.75rem;
+  height: calc(100vh - 4.9375rem);
+  margin-top: 3.75rem;
+  margin-left: 5.875rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6.875rem;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-bottom: 6.25rem;
+}
+
+.BuyingHistory .history-container .title-ment {
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}
+
+.BuyingHistory .history-container .OnGoingOrder {
+  width: 100%;
+  height: 15.625rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.3125rem;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .title-container {
+  display: flex;
+  width: 100%;
+  height: 2.0625rem;
+  gap: 1.0625rem;
+
+  align-items: center;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .button-container {
+  width: 8rem;
+  height: 100%;
+
+  background: #ffffff;
+  border: 0.0625rem solid #c1c4c9;
+  border-radius: 1.875rem;
+
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  padding-left: 1.4375rem;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .button-container p {
+  width: 3.25rem;
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+
+  color: #939393;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .button-container .down-icon {
+  color: #9ca2ae;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .item-container {
+  width: 100%;
+  height: 12.25rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+  gap: 2.8125rem;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .item-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .item-container div h1 {
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.125rem;
+
+  color: #626273;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .item-container div p {
+  height: 1.125rem;
+
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+
+  color: #626273;
+}
+
+.BuyingHistory .history-container .OnGoingOrder .item-container .right-icon {
+  color: #626273;
+  width: 0.6875rem;
+  height: 1.1875rem;
+  margin-bottom: 3.2rem;
+}
+
+.BuyingHistory .history-container .OrderHistory {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.BuyingHistory .history-container .OrderHistory .item-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.0625rem;
+}
+
+.BuyingHistory .history-container .OrderHistory .no-order {
+  width: 100%;
+  height: 11.25rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 11.25rem;
+
+  color: #000000;
+
+  text-align: center;
+}
+
+/* orderhistoryitem css */
+.OrderHistoryItem {
+  width: 100%;
+  height: 18.75rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+  padding-top: 2.25rem;
+  padding-left: 2.875rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.OrderHistoryItem h6 {
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}
+
+.OrderHistoryItem .item-detail-container {
+  width: 100%;
+  height: 10rem;
+
+  display: flex;
+  gap: 1.5625rem;
+}
+
+.OrderHistoryItem .item-detail-container img {
+  width: 10rem;
+  height: 100%;
+}
+
+.OrderHistoryItem .item-detail-container .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.0625rem;
+}
+
+.OrderHistoryItem .item-detail-container .text-container p {
+  height: 1.125rem;
+
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+
+  color: #9ca2ae;
+  margin-bottom: 0.25rem;
+}
+
+.OrderHistoryItem .item-detail-container .text-container h4 {
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}
+
+.OrderHistoryItem .item-detail-container .text-container h5 {
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+
+  color: #000000;
+}

@@ -8,7 +8,6 @@ interface GoodsListItemProps {
 }
 
 const GoodsListItem: React.FC<GoodsListItemProps> = ({ goods, onClick }) => {
-  console.log(goods);
   return (
     <div className="GoodsListItem" onClick={onClick}>
       <img
