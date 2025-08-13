@@ -14,6 +14,7 @@ export interface AllEmployee {
   hireDate: string | undefined;
   isSelected: boolean;
   pointsToSend: number;
+  phoneNumber: string | null;
 }
 
 export const allEmployeeState = atom<AllEmployee[]>({

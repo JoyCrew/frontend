@@ -1,0 +1,57 @@
+.InformationLayout {
+  width: 33.4375rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.InformationLayout label {
+  height: 3rem;
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 3rem;
+
+  color: #21212f;
+}
+
+.InformationLayout input {
+  width: 25rem;
+  height: 3rem;
+
+  background: #f3f4f6;
+  border: 0.0625rem solid #c1c4c9;
+  border-radius: 2.25rem;
+
+  padding: 0 1.875rem;
+
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 3rem;
+
+  color: #21212f;
+
+  outline: none;
+}
+
+.InformationLayout input:focus {
+  border-color: #6b63e1;
+}
+
+.InformationLayout.addressLayout {
+  height: 12rem;
+}
+
+.InformationLayout.addressLayout .address-content-container {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.InformationLayout.addressLayout .address-content-container .Button {
+  position: absolute;
+  top: 36.35rem;
+  left: 34.8em;
+}

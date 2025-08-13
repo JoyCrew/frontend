@@ -1,0 +1,24 @@
+.EditMyProfile .header-container {
+  width: 150rem;
+  height: 4.9375rem;
+  top: 0rem;
+
+  background-color: #ffffff;
+  box-shadow: 0.125rem 0.25rem 0.625rem rgba(217, 217, 217, 0.3);
+}
+
+.EditMyProfile .header-container .profile-header {
+  max-width: 80rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.EditMyProfile .profile-header img {
+  width: 9.0175rem;
+  height: 1.9919rem;
+}
