@@ -12,7 +12,7 @@ import BuyingGoods from "./pages/BuyingGoods";
 import BuyingHistory from "./pages/BuyingHistory";
 import Manager from "./pages/Manager";
 import ManagerPoint from "./pages/ManagerPoint";
-import EditProfile from "./pages/EditProfile";
+import EditMyProfile from "./pages/EditMyProfile";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
             <Route path="/buying_history" element={<BuyingHistory />} />
             <Route path="/manager" element={<Manager />} />
             <Route path="/manager/point" element={<ManagerPoint />} />
-            <Route path="/mypage/edit_profile" element={<EditProfile />} />
+            <Route path="/mypage/edit_profile" element={<EditMyProfile />} />
           </Routes>
         </BrowserRouter>
       </RecoilRoot>
