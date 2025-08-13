@@ -18,7 +18,7 @@ interface ChangePopupProps {
 }
 
 const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
-  const {address} = useRecoilValue(profileState);
+  const { address } = useRecoilValue(profileState);
   const allGoods = useRecoilValue(goodsState);
   const [selectedGoodsId, setSelectedGoodsId] =
     useRecoilState(selectedGoodsIdState);
@@ -55,17 +55,18 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
         <IoMdClose onClick={onClose} className="close-icon" />
         <div className="item-container">
           <div className="GoodsListItem">
-            <img src={goods.image ? goods.image : goodsImage} alt="goods" />
+            <img
+              src={goods.thumbnailUrl ? goods.thumbnailUrl : goodsImage}
+              alt="goods"
+            />
             <p>{goods.name}</p>
-            <h3>{goods.point} 포인트</h3>
+            <h3>{goods.price} 포인트</h3>
           </div>
           <div className="right-container">
             <div className="address-container">
               {/* 변경 필요 */}
               <h3>배송지 정보</h3>
-              <p>
-                {address}
-              </p>
+              <p>{address}</p>
             </div>
             <div className="quantity-container">
               <h3>수량 선택</h3>

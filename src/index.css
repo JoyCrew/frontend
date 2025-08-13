@@ -14,7 +14,7 @@ body {
   height: 100vh;
   background-color: #f8fbff;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 @font-face {
@@ -42,7 +42,6 @@ body * {
   height: 100%;
   display: flex;
   margin: 0 auto;
-
 }
 
 html {

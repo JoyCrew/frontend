@@ -7,15 +7,15 @@ import type { GoodsState } from "../../states/goodsState";
 import GoodsListItem from "./GoodsListItem";
 import GoodsCategory from "./GoodsCategory";
 import ChangePopup from "./ChangePopup";
-
+import RecentViewing from "./RecentViewing";
 const GoodsList: React.FC = () => {
-  //useRecoilState로 상품 목록 받아오기
   const goods = useRecoilValue(goodsState);
   const setSelectedGoodsId = useSetRecoilState(selectedGoodsIdState);
   const [showPopup, setShowPopup] = useState<boolean>(false);
 
   const openPopup = (id: number) => {
     setSelectedGoodsId(id);
+    // 최근 본 상품에 추가하면 되겠다
     setShowPopup(true);
   };
 
@@ -41,6 +41,7 @@ const GoodsList: React.FC = () => {
             <p></p>
           )}
         </div>
+        <RecentViewing />
       </div>
       {showPopup && <ChangePopup onClose={closePopup} />}
     </>
