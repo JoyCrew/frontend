@@ -1,0 +1,148 @@
+.EditProfile .header-container {
+  width: 150rem;
+  height: 4.9375rem;
+  top: 0rem;
+
+  background-color: #ffffff;
+  box-shadow: 0.125rem 0.25rem 0.625rem rgba(217, 217, 217, 0.3);
+}
+
+.EditProfile .header-container .profile-header {
+  max-width: 80rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.EditProfile .profile-header img {
+  width: 9.0175rem;
+  height: 1.9919rem;
+}
+
+.EditProfile .item-container {
+  width: 79.9375rem;
+  height: 50.3125rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.EditProfile .item-container .top-container {
+  width: 100%;
+  height: 3.5625rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.EditProfile .item-container .top-container h3 {
+  height: 100%;
+  line-height: 3.5625rem;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  color: #21212f;
+}
+
+.EditProfile .item-container .top-container .Button {
+  position: inherit;
+}
+
+.EditProfile .item-container .main-container {
+  width: 79.9375rem;
+  height: 45rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #f3f4f6;
+  border-radius: 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  padding-top: 3rem;
+}
+
+.EditProfile .item-container .main-container .image-name {
+  width: 7.5rem;
+  height: 9.75rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.EditProfile .item-container .main-container .image-name img {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.EditProfile .item-container .main-container .image-name h5 {
+  width: 100%;
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+
+  color: #21212f;
+  text-align: center;
+}
+
+.EditProfile .image-name .edit-icon {
+  position: relative;
+  top: -2rem;
+  left: 5.8rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  padding: 0.1rem;
+
+  color: #c1c4c9;
+  border: #c1c4c9 0.2rem solid;
+  border-radius: 100%;
+}
+
+.EditProfile .item-container .main-container .text-div {
+  width: 70.9375rem;
+  height: 25.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.EditProfile .item-container .main-container .left-div,
+.EditProfile .item-container .main-container .right-div {
+  width: 33.4375rem;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.EditProfile .item-container .main-container .left-div .password {
+  width: 16.5625rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.EditProfile .item-container .main-container .left-div .password p {
+  height: 100%;
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 3rem;
+
+  color: #21212f;
+}

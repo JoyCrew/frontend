@@ -49,7 +49,13 @@ const Profile: React.FC = () => {
       />
       <p>{name}</p>
       <div className="button-container">
-        <button>내 정보</button>
+        <button
+          onClick={() => {
+            nav("/mypage/edit_profile");
+          }}
+        >
+          내 정보
+        </button>
         <button onClick={handleLogout}>로그아웃</button>
       </div>
     </div>

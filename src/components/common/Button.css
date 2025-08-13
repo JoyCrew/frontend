@@ -55,3 +55,20 @@
 
   color: #ffffff;
 }
+
+.Button_profileChange {
+  position: inherit;
+  width: 8.125rem;
+  height: 3rem;
+
+  background: #6b63e1;
+  border-radius: 2.25rem;
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 3rem;
+
+  text-align: center;
+
+  color: #ffffff;
+}
