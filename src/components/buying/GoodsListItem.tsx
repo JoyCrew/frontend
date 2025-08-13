@@ -8,12 +8,14 @@ interface GoodsListItemProps {
 }
 
 const GoodsListItem: React.FC<GoodsListItemProps> = ({ goods, onClick }) => {
-  console.log(goods);
   return (
     <div className="GoodsListItem" onClick={onClick}>
-      <img src={goods.image ? goods.image : goodsImage} alt="goods" />
+      <img
+        src={goods.thumbnailUrl ? goods.thumbnailUrl : goodsImage}
+        alt="goods"
+      />
       <p>{goods.name}</p>
-      <h3>{goods.point} 포인트</h3>
+      <h3>{goods.price} 포인트</h3>
     </div>
   );
 };

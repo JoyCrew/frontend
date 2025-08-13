@@ -20,11 +20,11 @@ const GoodsCategory = () => {
   return (
     <div className="GoodsCategory">
       <div className="category-container">
-        <p>전체</p>
+        <p className="active">전체</p>
+        <p>뷰티</p>
+        <p>가구</p>
         <p>의류</p>
         <p>음식</p>
-        <p>가전</p>
-        <p>화장품</p>
       </div>
       <div className="input-container">
         <input

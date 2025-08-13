@@ -31,4 +31,20 @@ export const profileState = atom<ProfileState>({
     address: null,
     hireDate: null,
   },
+  effects_UNSTABLE: [
+    ({ setSelf, onSet }) => {
+      const savedState = localStorage.getItem("profile_state");
+      if (savedState != null) {
+        setSelf(JSON.parse(savedState));
+      }
+
+      onSet((newValue, _, isReset) => {
+        if (isReset) {
+          localStorage.removeItem("profile_state");
+        } else {
+          localStorage.setItem("profile_state", JSON.stringify(newValue));
+        }
+      });
+    },
+  ],
 });

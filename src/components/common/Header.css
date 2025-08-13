@@ -21,8 +21,8 @@
 .Header .left-section {
   display: flex;
   align-items: center;
-  gap: 4rem;
-  width: 19.5rem;
+  gap: 2rem;
+  width: 17.8rem;
 }
 
 .Header .left-section .manager {
