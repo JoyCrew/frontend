@@ -1,5 +1,4 @@
 import "../../styles/GoodsList.css";
-
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { useState } from "react";
 import { goodsState, selectedGoodsIdState } from "../../states/goodsState";
@@ -8,14 +7,25 @@ import GoodsListItem from "./GoodsListItem";
 import GoodsCategory from "./GoodsCategory";
 import ChangePopup from "./ChangePopup";
 import RecentViewing from "./RecentViewing";
+import apiClient from "../../api/axiosClient";
+
 const GoodsList: React.FC = () => {
   const goods = useRecoilValue(goodsState);
   const setSelectedGoodsId = useSetRecoilState(selectedGoodsIdState);
   const [showPopup, setShowPopup] = useState<boolean>(false);
 
+  const postRecentView = async (id: number) => {
+    try {
+      const response = await apiClient.post(`/api/recent-views/${id}`);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const openPopup = (id: number) => {
     setSelectedGoodsId(id);
-    // 최근 본 상품에 추가하면 되겠다
+    postRecentView(id);
     setShowPopup(true);
   };
 
