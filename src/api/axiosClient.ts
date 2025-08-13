@@ -44,11 +44,12 @@ apiClient.interceptors.response.use(
     return Response;
   },
   (error) => {
-    if (error.response?.status === 401) {
-      console.error("인증 토큰 만료. 로그아웃 진행");
-      localStorage.removeItem("auth_state");
-      window.location.href = "/";
-    }
+    console.log(error);
+    // if (error.response?.status === 401) {
+    //   console.error("인증 토큰 만료. 로그아웃 진행");
+    //   localStorage.removeItem("auth_state");
+    //   window.location.href = "/";
+    // }
     return Promise.reject(error);
   }
 );

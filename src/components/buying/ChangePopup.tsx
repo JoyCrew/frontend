@@ -5,6 +5,7 @@ import { FaSquareMinus } from "react-icons/fa6";
 import { FaSquarePlus } from "react-icons/fa6";
 import goodsImage from "../../assets/goodsImage.svg";
 import Button from "../common/Button";
+import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -12,12 +13,14 @@ import { selectedGoodsIdState, goodsState } from "../../states/goodsState";
 import type { GoodsState } from "../../states/goodsState";
 
 import { profileState } from "../../states/propfileState";
+import apiClient from "../../api/axiosClient";
 
 interface ChangePopupProps {
   onClose: () => void;
 }
 
 const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
+  const nav = useNavigate();
   const { address } = useRecoilValue(profileState);
   const allGoods = useRecoilValue(goodsState);
   const [selectedGoodsId, setSelectedGoodsId] =
@@ -33,10 +36,24 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
     }
   }, [selectedGoodsId, allGoods]);
 
-  const onClickChange = () => {
-    // 상품 교환 로직 필요
-    setSelectedGoodsId(null);
-    onClose();
+  const onClickChange = async () => {
+    try {
+      const response = await apiClient.post("/api/orders", {
+        productId: selectedGoodsId,
+        quantity: quantity,
+      });
+      console.log(selectedGoodsId, quantity);
+      console.log(response.data);
+      setSelectedGoodsId(null);
+      onClose();
+      alert("상품 교환이 성공적으로 완료되었습니다!");
+      nav("/buying_history");
+    } catch (error) {
+      console.log(error);
+      setSelectedGoodsId(null);
+      onClose();
+      alert("상품 교환이 실패하였습니다.");
+    }
   };
 
   const handleQuantityChange = (type: "plus" | "minus") => {
@@ -44,6 +61,13 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
       setQuantity((prev) => prev + 1);
     } else if (type === "minus" && quantity > 1) {
       setQuantity((prev) => prev - 1);
+    }
+  };
+
+  const onChangeQuantity = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value, 10);
+    if (!isNaN(value) && value > 0) {
+      setQuantity(value);
     }
   };
 
@@ -64,7 +88,6 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
           </div>
           <div className="right-container">
             <div className="address-container">
-              {/* 변경 필요 */}
               <h3>배송지 정보</h3>
               <p>{address}</p>
             </div>
@@ -75,7 +98,11 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
                   onClick={() => handleQuantityChange("minus")}
                   className="quantity-icon"
                 />
-                <input type="number" value={quantity} />
+                <input
+                  type="number"
+                  value={quantity}
+                  onChange={onChangeQuantity}
+                />
                 <FaSquarePlus
                   onClick={() => handleQuantityChange("plus")}
                   className="quantity-icon"
