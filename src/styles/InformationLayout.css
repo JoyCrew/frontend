@@ -35,6 +35,10 @@
   outline: none;
 }
 
+.InformationLayout input:focus {
+  border-color: #6b63e1;
+}
+
 .InformationLayout.addressLayout {
   height: 12rem;
 }
@@ -48,6 +52,6 @@
 
 .InformationLayout.addressLayout .address-content-container .Button {
   position: absolute;
-  top: 37.6rem;
+  top: 36.35rem;
   left: 34.8em;
 }
