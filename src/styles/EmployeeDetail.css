@@ -1,0 +1,47 @@
+.EmployeeDetail {
+  width: 47.5rem;
+  height: 57.5rem;
+
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.EmployeeDetail .close-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #9ca2ae;
+  margin-left: 43rem;
+  margin-top: 2.25rem;
+}
+
+.EmployeeDetail .detail-container {
+  width: 33.4375rem;
+  height: 45rem;
+  margin-left: 6.4375rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.EmployeeDetail .detail-container img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 100%;
+}
+
+.EmployeeDetail .detail-container h3 {
+  height: 1.125rem;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.125rem;
+
+  color: #21212f;
+
+  margin-bottom: 1.25rem;
+}
