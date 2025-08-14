@@ -18,14 +18,12 @@ const ManagerPopup: React.FC<ManagerPopupProps> = ({
   onCancel,
 }) => {
   return (
-    <div className="popup-overlay">
-      <div className="ManagerPopup">
-        <IoMdClose onClick={onCancel} className="close-icon" />
-        <div className="content-container">
-          <h3>{title}</h3>
-          <p>{content}</p>
-          <Button text={button} onClick={onConfirm} className="popup" />
-        </div>
+    <div className="ManagerPopup">
+      <IoMdClose onClick={onCancel} className="close-icon" />
+      <div className="content-container">
+        <h3>{title}</h3>
+        <p>{content}</p>
+        <Button text={button} onClick={onConfirm} className="popup" />
       </div>
     </div>
   );

@@ -78,7 +78,6 @@ const GoodsCategory = () => {
             onClick={() => {
               onClickCategory(category.value);
               setIsSearchGoodsState(false);
-              console.log("하이루");
             }}
             className={selectedCategory === category.value ? "active" : ""}
           >

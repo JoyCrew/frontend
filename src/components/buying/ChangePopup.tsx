@@ -14,6 +14,7 @@ import type { GoodsState } from "../../states/goodsState";
 
 import { profileState } from "../../states/propfileState";
 import apiClient from "../../api/axiosClient";
+import { AiOutlineExport } from "react-icons/ai";
 
 interface ChangePopupProps {
   onClose: () => void;
@@ -83,11 +84,15 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
               src={goods.thumbnailUrl ? goods.thumbnailUrl : goodsImage}
               alt="goods"
             />
-            <p>{goods.name}</p>
+            <div className="name">
+              <p>{goods.name}</p>
+              <AiOutlineExport className="export-icon" />
+            </div>
+
             <h3>{goods.price} 포인트</h3>
           </div>
           <div className="right-container">
-            <p>{goods.detailUrl}</p>
+            {/* <p>{goods.detailUrl}</p> */}
             <div className="address-container">
               <h3>배송지 정보</h3>
               <p>{address}</p>

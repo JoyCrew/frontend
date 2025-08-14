@@ -47,6 +47,7 @@ const Login: React.FC = () => {
       nav("/home");
     } catch (error) {
       console.error("로그인 실패:", error);
+      alert("로그인에 실패하였습니다");
     }
   };
 

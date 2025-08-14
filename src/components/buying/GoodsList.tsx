@@ -15,6 +15,7 @@ import RecentViewing from "./RecentViewing";
 import apiClient from "../../api/axiosClient";
 import { isSearchGoodsState } from "../../states/goodsState";
 import { searchGoodsState } from "../../states/goodsState";
+import useGetRecent from "../../hooks/useGetRecent";
 
 const GoodsList: React.FC = () => {
   const searchGoods = useRecoilValue(searchGoodsState);
@@ -24,11 +25,11 @@ const GoodsList: React.FC = () => {
   const category = useRecoilValue(categoryState);
   const setSelectedGoodsId = useSetRecoilState(selectedGoodsIdState);
   const [showPopup, setShowPopup] = useState<boolean>(false);
+  const getRecent = useGetRecent();
 
   const postRecentView = async (id: number) => {
     try {
-      const response = await apiClient.post(`/api/recent-views/${id}`);
-      console.log(response.data);
+      await apiClient.post(`/api/recent-views/${id}`);
     } catch (error) {
       console.log(error);
     }
@@ -43,6 +44,7 @@ const GoodsList: React.FC = () => {
   const closePopup = () => {
     setShowPopup(false);
     setSelectedGoodsId(null);
+    getRecent();
   };
 
   const itemList = isSearchGoods
@@ -57,9 +59,9 @@ const GoodsList: React.FC = () => {
         <GoodsCategory />
         <div className="item-container">
           {itemList.length > 0 ? (
-            itemList.map((goodsItem: GoodsState) => (
+            itemList.map((goodsItem: GoodsState, index) => (
               <GoodsListItem
-                key={goodsItem.id}
+                key={index}
                 goods={goodsItem}
                 onClick={() => openPopup(goodsItem.id)}
               />
