@@ -33,7 +33,7 @@ export const goodsState = atom<GoodsState[]>({
       name: "게이밍 마우스",
       thumbnailUrl: "",
       price: 25000,
-      detailUrl: "",
+      detailUrl: "www.w.djslkfjdslkfjksldjf;sl",
       itemId: 1002,
       registeredAt: "2025-08-02 00:00:00",
     },

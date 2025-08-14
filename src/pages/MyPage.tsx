@@ -6,12 +6,14 @@ import useMyInfo from "../hooks/useMyInfo";
 import PointHistoryCard from "../components/mypage/PointHistory";
 import GiveAndTake from "../components/mypage/GiveAndTake";
 import TagHistory from "../components/mypage/TagHistory";
+import useGetStatistics from "../hooks/useGetStatistics";
 
 const MyPage = () => {
   useMyInfo();
+  useGetStatistics();
   return (
     <div className="MyPage">
-      <Header  />
+      <Header />
       <div className="main">
         <div className="top-container">
           <PointStatus />

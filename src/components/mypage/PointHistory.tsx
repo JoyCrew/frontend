@@ -23,7 +23,7 @@ const PointHistoryCard: React.FC = () => {
 
   return (
     <div className="PointHistoryCard">
-      <h2 className="title">포인트 사용 내역</h2>
+      <h2 className="title">포인트 내역</h2>
       <div className="card-list-container">
         {history.map((entry) => (
           <PointHistoryItem key={entry.transactionId} entry={entry} />
