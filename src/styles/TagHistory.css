@@ -23,5 +23,26 @@
   background: #ffffff;
   border: 0.0625rem solid #f3f4f6;
   border-radius: 1.25rem;
-  padding: 2.25rem 2.75rem;
+  padding: 2.25rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.TagHistory .tag-container .tag-item {
+  width: 9.4375rem;
+  height: 1.3125rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TagHistory .tag-container .tag-item p {
+  height: 1.3125rem;
+
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+
+  color: #21212f;
 }

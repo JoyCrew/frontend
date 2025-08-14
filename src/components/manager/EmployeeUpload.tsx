@@ -164,11 +164,6 @@ const EmployeeUpload: React.FC = () => {
   const handleDeleteCancel = () => {
     setIsPopupOpen(false);
   };
-
-  const onClickbutton = () => {
-    console.log("버튼 클릭");
-  };
-
   return (
     <div className="EmployeeUpload">
       <div className="input-container">
@@ -197,11 +192,10 @@ const EmployeeUpload: React.FC = () => {
           style={{ display: "none" }}
         />
         <Button
-          text="파일 업로드"
+          text="직원 등록"
           className="small"
           onClick={handleFileUploadClick}
         />
-        <Button text="직원 등록" className="small" onClick={onClickbutton} />
         <Button
           text="직원 삭제"
           className="small"

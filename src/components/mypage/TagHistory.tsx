@@ -11,7 +11,10 @@ const TagHistory: React.FC = () => {
       <h3>태그</h3>
       <div className="tag-container">
         {tag.map((tagItem: TagState, index: number) => (
-          <p key={index}>{tagItem.name}</p>
+          <div key={index} className="tag-item">
+            <p>{tagItem.name}</p>
+            <p>{tagItem.count}</p>
+          </div>
         ))}
       </div>
     </div>

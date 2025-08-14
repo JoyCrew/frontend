@@ -87,6 +87,7 @@ const ChangePopup: React.FC<ChangePopupProps> = ({ onClose }) => {
             <h3>{goods.price} 포인트</h3>
           </div>
           <div className="right-container">
+            <p>{goods.detailUrl}</p>
             <div className="address-container">
               <h3>배송지 정보</h3>
               <p>{address}</p>

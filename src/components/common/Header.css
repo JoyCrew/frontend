@@ -114,6 +114,7 @@
 .Header .profile .person {
   width: 2.875rem;
   height: 2.875rem;
+  border-radius: 100%;
 }
 
 .Header .profile .ment {

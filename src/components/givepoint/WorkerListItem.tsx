@@ -2,6 +2,8 @@ import "../../styles/WorkerListItem.css";
 import type { Employee } from "../../states/searchResultState";
 import type { AllEmployee } from "../../states/allEmployeeState";
 import employeePerson from "../../assets/employeePerson.svg";
+import EmployeeDetail from "../manager/EmployeeDetail";
+import { useState } from "react";
 
 interface WorkerListItemProps {
   employee: Employee | AllEmployee;
@@ -22,9 +24,16 @@ const WorkerListItem: React.FC<WorkerListItemProps> = ({
   className,
   onPointsChange,
 }) => {
+  const [isDetail, setIsDetail] = useState<boolean>(false);
   const handlePointsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (onPointsChange) {
       onPointsChange(employee.employeeId, Number(e.target.value));
+    }
+  };
+
+  const showDetail = () => {
+    if (showDetails === "joining-birth") {
+      setIsDetail(true);
     }
   };
 
@@ -38,7 +47,7 @@ const WorkerListItem: React.FC<WorkerListItemProps> = ({
           onChange={onToggle}
         />
         <div className="info-container">
-          <div className="image-name">
+          <div className="image-name" onClick={showDetail}>
             <img
               src={
                 employee.profileImageUrl
@@ -67,6 +76,15 @@ const WorkerListItem: React.FC<WorkerListItemProps> = ({
                 onClick={(e) => e.stopPropagation()}
               />
             </>
+          )}
+
+          {isDetail && (
+            <EmployeeDetail
+              employee={employee as AllEmployee}
+              onClose={() => {
+                setIsDetail(false);
+              }}
+            />
           )}
         </div>
       </div>

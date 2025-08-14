@@ -59,6 +59,7 @@
 .EditProfile .main-container .image-name img {
   width: 7.5rem;
   height: 7.5rem;
+  border: 100%;
 }
 
 .EditProfile .main-container .image-name h5 {

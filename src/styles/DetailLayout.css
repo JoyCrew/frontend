@@ -1,0 +1,34 @@
+.DetailLayout {
+  width: 33.4375rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.DetailLayout h6 {
+  height: 3rem;
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 3rem;
+
+  color: #21212f;
+}
+
+.DetailLayout p {
+  width: 25rem;
+  height: 3rem;
+
+  background: #ffffff;
+  border: 0.0625rem solid #c1c4c9;
+  border-radius: 2.25rem;
+
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 3rem;
+  padding: auto 0;
+  padding-left: 1.875rem;
+
+  color: #21212f;
+}
