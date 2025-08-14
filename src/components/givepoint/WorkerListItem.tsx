@@ -80,7 +80,7 @@ const WorkerListItem: React.FC<WorkerListItemProps> = ({
 
           {isDetail && (
             <EmployeeDetail
-              employee={employee}
+              employee={employee as AllEmployee}
               onClose={() => {
                 setIsDetail(false);
               }}

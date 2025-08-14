@@ -6,12 +6,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { profileState } from "../../states/propfileState";
 
-
-
 const Header: React.FC = () => {
   const nav = useNavigate();
   const location = useLocation();
-  const { level, name, totalBalance, profileImageUrl } = useRecoilValue(profileState);
+  const { level, name, totalBalance, profileImageUrl } =
+    useRecoilValue(profileState);
 
   const navItems = [
     { name: "홈", path: "/home" },
@@ -52,7 +51,11 @@ const Header: React.FC = () => {
         </div>
         <div className="right-section">
           <div className="profile">
-            <img className="person" src={profileImageUrl ? profileImageUrl : person} alt="person" />
+            <img
+              className="person"
+              src={profileImageUrl ? profileImageUrl : person}
+              alt="person"
+            />
             <div className="ment">
               <p className="name">{name}</p>
               <p className="point">{totalBalance} points</p>
