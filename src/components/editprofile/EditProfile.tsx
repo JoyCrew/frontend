@@ -8,9 +8,11 @@ import InformationLayout from "./InformationLayout";
 import apiClient from "../../api/axiosClient";
 import { editingProfileState } from "../../states/propfileState";
 import { MdEdit } from "react-icons/md";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import EditPassword from "./EditPassword";
 
 const EditProfile: React.FC = () => {
+  const [isPassword, setIsPassword] = useState<boolean>(false);
   const nav = useNavigate();
   const profile = useRecoilValue(profileState);
   const [editingProfile, setEditingProfile] =
@@ -41,10 +43,6 @@ const EditProfile: React.FC = () => {
       console.log(error);
       alert("오류가 발생하였습니다. 다시 시도해보세요");
     }
-  };
-
-  const onClickPassword = () => {
-    console.log("비밀번호 변경");
   };
 
   const changeImage = () => {
@@ -101,7 +99,9 @@ const EditProfile: React.FC = () => {
               <p>비밀번호</p>
               <Button
                 text="비밀번호 변경"
-                onClick={onClickPassword}
+                onClick={() => {
+                  setIsPassword(true);
+                }}
                 className="profileChange"
               />
             </div>
@@ -120,6 +120,13 @@ const EditProfile: React.FC = () => {
           </div>
         </div>
       </div>
+      {isPassword && (
+        <EditPassword
+          onCancel={() => {
+            setIsPassword(false);
+          }}
+        />
+      )}
     </div>
   );
 };

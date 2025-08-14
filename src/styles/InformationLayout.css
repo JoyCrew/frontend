@@ -55,3 +55,7 @@
   top: 36.35rem;
   left: 34.8em;
 }
+
+.InformationLayout input.false {
+  border: 0.0625rem solid #f44242;
+}
