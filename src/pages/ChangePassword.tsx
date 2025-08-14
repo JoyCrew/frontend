@@ -36,6 +36,7 @@ const ChangePassword: React.FC = () => {
       );
       console.log("비밀번호 변경 성공", response.data);
       nav("/");
+      alert("비밀번호를 변경하였습니다. 로그인을 진행하세요");
     } catch (error) {
       console.error("비밀번호 변경 실패:", error);
       alert("비밀번호 변경에 실패했습니다. 다시 시도해 주세요.");

@@ -22,16 +22,6 @@ export const selectedEmployeeCountSelector = selector<number>({
   },
 });
 
-//전송 후 남는 포인트
-export const remainingPointsSelector = selector<number>({
-  key: "remainingPointsSelector",
-  get: ({ get }) => {
-    const availablePoints = get(availablePointsState);
-    const sendingPoints = get(sendingPointsState);
-    return availablePoints - sendingPoints;
-  },
-});
-
 //포인트 실시간 계산
 export const totalPointsToSendSelector = selector({
   key: "totalPointsToSendSelector",
@@ -62,5 +52,15 @@ export const totalPointsToSendSelector = selector({
 
       set(sendingPointsState, newValue);
     }
+  },
+});
+
+//전송 후 남는 포인트
+export const remainingPointsSelector = selector<number>({
+  key: "remainingPointsSelector",
+  get: ({ get }) => {
+    const availablePoints = get(availablePointsState);
+    const sendingPoints = get(totalPointsToSendSelector);
+    return availablePoints - sendingPoints;
   },
 });

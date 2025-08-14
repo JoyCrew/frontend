@@ -21,7 +21,7 @@ const GoodsCategory = () => {
       try {
         const response = await apiClient.get(`/api/products/search`, {
           params: {
-            keyword: searchTerm,
+            q: searchTerm,
             page: page,
             size: 20,
           },

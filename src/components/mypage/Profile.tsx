@@ -28,6 +28,7 @@ const Profile: React.FC = () => {
       });
       nav("/");
     } catch (error) {
+      nav("/");
       console.error("로그아웃 실패:", error);
       setAuthState({
         accessToken: null,

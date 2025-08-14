@@ -78,7 +78,7 @@ const SearchWorker: React.FC = () => {
       <div className="search-box">
         <input
           type="search"
-          placeholder="직원 이름 또는 부서를 입력하세요..."
+          placeholder="직원 이름을 입력하세요"
           value={searchTerm}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
