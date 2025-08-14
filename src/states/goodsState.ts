@@ -137,3 +137,14 @@ export const recentGoodsState = atom<GoodsState[]>({
   key: "recentGoodsState",
   default: [],
 });
+
+export const selectedCategoryState = atom<string | null>({
+  key: "selectedCategoryState",
+  default: null,
+});
+
+export const categoryState = atom<GoodsState[]>({
+  // BEAUTY, APPLIANCES, FURNITURE, CLOTHING, FOOD
+  key: "categoryState",
+  default: [],
+});
