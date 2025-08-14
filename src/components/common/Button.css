@@ -72,3 +72,23 @@
 
   color: #ffffff;
 }
+
+.Button_white {
+  position: inherit;
+  width: 10rem;
+  height: 3.8125rem;
+
+  background: #ffffff;
+  border: 0.125rem solid #f3f4f6;
+  border-radius: 1.25rem;
+
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 3.8125rem;
+
+  color: #464656;
+  box-shadow: none;
+
+  margin-top: 7rem;
+  margin-left: 20rem;
+}
