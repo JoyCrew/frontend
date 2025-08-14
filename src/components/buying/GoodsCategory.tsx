@@ -1,17 +1,50 @@
 import "../../styles/GoodsCategory.css";
 import { IoIosSearch } from "react-icons/io";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { selectedCategoryState } from "../../states/goodsState";
-import { useRecoilState } from "recoil";
+import { searchGoodsState } from "../../states/goodsState";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import apiClient from "../../api/axiosClient";
+import { isSearchGoodsState } from "../../states/goodsState";
 
 const GoodsCategory = () => {
+  const setIsSearchGoodsState = useSetRecoilState(isSearchGoodsState);
+  const setSearchGoodsState = useSetRecoilState(searchGoodsState);
   const [searchTerm, setSearchTerm] = useState("");
   // BEAUTY, APPLIANCES, FURNITURE, CLOTHING, FOOD
   const [selectedCategory, setSelectedCategory] = useRecoilState(
     selectedCategoryState
   );
 
-  const performSearch = async () => {};
+  const performSearch = useCallback(
+    async (page: number) => {
+      try {
+        const response = await apiClient.get(`/api/products/search`, {
+          params: {
+            keyword: searchTerm,
+            page: page,
+            size: 20,
+          },
+        });
+
+        setSearchGoodsState((prev) => {
+          const safePrev = prev || [];
+          return page === 0
+            ? response.data.content
+            : [...safePrev, ...response.data.content];
+        });
+
+        if (response.data.hasNext) {
+          performSearch(page + 1);
+        }
+        setIsSearchGoodsState(true);
+      } catch (error) {
+        console.log(error);
+        setSearchGoodsState([]);
+      }
+    },
+    [searchTerm, setSearchGoodsState, setIsSearchGoodsState]
+  );
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
@@ -19,7 +52,7 @@ const GoodsCategory = () => {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      performSearch();
+      performSearch(0);
     }
   };
 
@@ -42,7 +75,11 @@ const GoodsCategory = () => {
         {categories.map((category) => (
           <p
             key={category.name}
-            onClick={() => onClickCategory(category.value)}
+            onClick={() => {
+              onClickCategory(category.value);
+              setIsSearchGoodsState(false);
+              console.log("하이루");
+            }}
             className={selectedCategory === category.value ? "active" : ""}
           >
             {category.name}
@@ -57,7 +94,12 @@ const GoodsCategory = () => {
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
         />
-        <IoIosSearch className="search-icon" onClick={performSearch} />
+        <IoIosSearch
+          className="search-icon"
+          onClick={() => {
+            performSearch(0);
+          }}
+        />
       </div>
     </div>
   );

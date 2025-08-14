@@ -13,8 +13,12 @@ import GoodsCategory from "./GoodsCategory";
 import ChangePopup from "./ChangePopup";
 import RecentViewing from "./RecentViewing";
 import apiClient from "../../api/axiosClient";
+import { isSearchGoodsState } from "../../states/goodsState";
+import { searchGoodsState } from "../../states/goodsState";
 
 const GoodsList: React.FC = () => {
+  const searchGoods = useRecoilValue(searchGoodsState);
+  const isSearchGoods = useRecoilValue(isSearchGoodsState);
   const goods = useRecoilValue(goodsState);
   const selectedCategory = useRecoilValue(selectedCategoryState);
   const category = useRecoilValue(categoryState);
@@ -41,8 +45,11 @@ const GoodsList: React.FC = () => {
     setSelectedGoodsId(null);
   };
 
-  const itemList = selectedCategory === null ? goods : category;
-  console.log(itemList);
+  const itemList = isSearchGoods
+    ? searchGoods
+    : selectedCategory === null
+    ? goods
+    : category;
 
   return (
     <>

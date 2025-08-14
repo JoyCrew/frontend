@@ -18,6 +18,7 @@
   line-height: 1.125rem;
 
   color: #626273;
+  cursor: pointer;
 }
 
 .GoodsCategory .category-container .active {

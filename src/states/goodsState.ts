@@ -144,7 +144,16 @@ export const selectedCategoryState = atom<string | null>({
 });
 
 export const categoryState = atom<GoodsState[]>({
-  // BEAUTY, APPLIANCES, FURNITURE, CLOTHING, FOOD
   key: "categoryState",
   default: [],
+});
+
+export const searchGoodsState = atom<GoodsState[]>({
+  key: "searchGoodsState",
+  default: [],
+});
+
+export const isSearchGoodsState = atom<boolean>({
+  key: "isSearchGoodsState",
+  default: false,
 });
