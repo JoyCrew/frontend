@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.Home .header-container {
+  width: 100%;
+}
+
 .Home .content-container {
   width: 47.125rem;
   height: 37.5rem;

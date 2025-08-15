@@ -1,5 +1,5 @@
 .header-container {
-  width: 100%;
+  width: 120rem;
   height: 4.9375rem;
   top: 0rem;
 
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
 }
 
 .Header .left-section {
