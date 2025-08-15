@@ -101,6 +101,7 @@ const PointMenu: React.FC = () => {
       );
       setTotalPointsToSend(0);
       alert("포인트를 전송하였습니다");
+      window.location.reload();
     } catch (error) {
       console.error("포인트 전송 실패:", error);
       alert("포인트 전송에 실패했습니다.");
