@@ -30,6 +30,7 @@ const OrderHistoryItem: React.FC<OrderHistoryItemProps> = ({ order }) => {
     try {
       await apiClient.patch(`/api/orders/${order.orderId}/cancel`);
       setIsCancel(false);
+      window.location.reload();
     } catch (error) {
       console.log(error);
       setIsCancel(false);

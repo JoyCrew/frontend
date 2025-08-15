@@ -100,6 +100,7 @@ const PointMenu: React.FC = () => {
         prev.map((emp) => ({ ...emp, isSelected: false, pointsToSend: 0 }))
       );
       setTotalPointsToSend(0);
+      alert("포인트를 전송하였습니다");
     } catch (error) {
       console.error("포인트 전송 실패:", error);
       alert("포인트 전송에 실패했습니다.");

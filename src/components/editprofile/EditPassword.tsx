@@ -39,15 +39,15 @@ const EditPassword: React.FC<EditPasswordProps> = ({ onCancel }) => {
         currentPassword: currentPassword,
       });
 
-      await apiClient.patch("/api/user/password", {
+      await apiClient.post("/api/user/password", {
         newPassword: newPassword,
       });
 
       alert("비밀번호가 성공적으로 변경되었습니다.");
       onCancel();
     } catch (error) {
-      alert("현재 비밀번호가 올바르지 않습니다");
       console.log(error);
+      onCancel();
     }
   };
 
@@ -66,7 +66,7 @@ const EditPassword: React.FC<EditPasswordProps> = ({ onCancel }) => {
           />
           <PasswordLayout
             label="비밀번호 변경"
-            name="birthday"
+            name="newPassword"
             type="password"
             placeholder="비밀번호 변경"
             value={newPassword}
@@ -75,7 +75,7 @@ const EditPassword: React.FC<EditPasswordProps> = ({ onCancel }) => {
           <div className="last-passwordLayout">
             <PasswordLayout
               label="비밀번호 확인"
-              name="birthday"
+              name="confirmPassword"
               type="password"
               placeholder="비밀번호 확인"
               value={confirmPassword}

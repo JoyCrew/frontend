@@ -13,6 +13,7 @@ import EditPassword from "./EditPassword";
 
 const EditProfile: React.FC = () => {
   const [isPassword, setIsPassword] = useState<boolean>(false);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const nav = useNavigate();
   const profile = useRecoilValue(profileState);
   const [editingProfile, setEditingProfile] =
@@ -22,21 +23,33 @@ const EditProfile: React.FC = () => {
   }`.trim();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const formData = new FormData();
+  const profileData = {
+    name: profile.name,
+    personalEmail: editingProfile.personalEmail,
+    phoneNumber: editingProfile.phoneNumber,
+    birthday: editingProfile.birthday,
+    address: fullAddress,
+  };
+  const requestJson = new Blob([JSON.stringify(profileData)], {
+    type: "application/json",
+  });
+  formData.append("request", requestJson);
+  if (uploadedFile) {
+    formData.append("profileImage", uploadedFile);
+  }
   const onSubmitEdit = async () => {
-    if (editingProfile) {
+    if (!editingProfile) {
       alert("정보를 수정해주세요");
     }
 
     try {
-      const response = await apiClient.patch("/api/user/profile", {
-        name: profile.name,
-        profileImageUrl: editingProfile.profileImageUrl,
-        personalEmail: editingProfile.personalEmail,
-        phoneNumber: editingProfile.phoneNumber,
-        birthday: editingProfile.birthday,
-        address: fullAddress,
+      const response = await apiClient.patch("/api/user/profile", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
-      console.log(response.data);
+      console.log(response.data, "성공");
       nav("/mypage");
       window.location.reload();
     } catch (error) {
@@ -52,6 +65,8 @@ const EditProfile: React.FC = () => {
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      setUploadedFile(file);
+
       const reader = new FileReader();
       reader.onloadend = () => {
         setEditingProfile((prev) => ({
