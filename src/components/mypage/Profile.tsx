@@ -2,13 +2,14 @@ import "../../styles/Profile.css";
 import { useRecoilValue } from "recoil";
 import { useSetRecoilState } from "recoil";
 import { authState } from "../../states/authState";
+import { profileState } from "../../states/propfileState";
 import { useNavigate } from "react-router-dom";
 import profile from "../../assets/profile.svg";
 import apiClient from "../../api/axiosClient";
 
 const Profile: React.FC = () => {
   const nav = useNavigate();
-  const auth = useRecoilValue(authState);
+  const auth = useRecoilValue(profileState);
   const { name, profileImageUrl } = auth;
   const setAuthState = useSetRecoilState(authState);
 
@@ -28,6 +29,7 @@ const Profile: React.FC = () => {
       });
       nav("/");
     } catch (error) {
+      nav("/");
       console.error("로그아웃 실패:", error);
       setAuthState({
         accessToken: null,

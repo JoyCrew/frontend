@@ -191,6 +191,7 @@
 }
 
 .OrderHistoryItem .item-detail-container .text-container {
+  width: 30rem;
   display: flex;
   flex-direction: column;
   gap: 1.0625rem;

@@ -83,10 +83,13 @@ const Sending: React.FC<SendingProps> = ({ employee }) => {
         const response = await apiClient.post("api/gift-points", requestBody);
         console.log(requestBody);
         console.log("포인트 전송 성공", response.data);
+        alert("성공적으로 전송하였습니다");
         nav("/home");
+
         window.location.reload();
       } catch (error) {
         console.log(error);
+        alert("포인트 전송에 실패하였습니다");
       }
     }
   };

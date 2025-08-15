@@ -31,7 +31,7 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({
   }
 
   return (
-    <div className="popup-overlay">
+    <div className="EmployeePopup-overlay">
       <div className="EmployeeDetail">
         <IoMdClose className="close-icon" onClick={onClose} />
         <div className="detail-container">

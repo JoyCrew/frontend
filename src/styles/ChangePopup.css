@@ -46,7 +46,7 @@
   width: 15.625rem;
   height: 21.375rem;
 
-  gap: 1.75rem;
+  gap: 1.3rem;
   text-align: left;
 }
 
@@ -57,8 +57,21 @@
   border-radius: 1.25rem;
 }
 
-.ChangePopup .GoodsListItem p {
+.ChangePopup .GoodsListItem .name {
+  display: flex;
+  gap: 1rem;
+}
+
+.ChangePopup .GoodsListItem .name p {
   font-size: 1.75rem;
+  height: 2.5rem;
+  line-height: 1.6rem;
+}
+
+.ChangePopup .GoodsListItem .name .export-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #9ca2ae;
 }
 
 .ChangePopup .GoodsListItem h3 {

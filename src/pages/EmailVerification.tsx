@@ -25,8 +25,10 @@ const EmailVerification: React.FC = () => {
           { email: email }
         );
         console.log("이메일 전송 성공", response.data);
+        alert("인증 메일을 전송하였습니다");
       } catch (error) {
         console.error("이메일 전송 실패:", error);
+        alert("메일 전송에 실패하였습니다");
       }
     } else {
       console.log("유효하지 않은 이메일입니다.");
